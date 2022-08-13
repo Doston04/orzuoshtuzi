@@ -1,0 +1,7 @@
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background-color: var(--blue);
+  border-radius: 0 0 64px 64px;
+}
+/* ===== ABOUT ===== */

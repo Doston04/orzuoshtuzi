@@ -1,0 +1,43 @@
+#aboutUs {
+  background-color: var(--blue);
+  margin-top: 144px;
+}
+#sectionTitle {
+  color: var(--white);
+}
+.aboutDesc {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  max-width: 1090px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  opacity: 0.8;
+}
+.achievements__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--white);
+  padding: 72px;
+}
+.aboutTextSection {
+  margin-top: 60px;
+}
+.aboutTextSection__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.textSection__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+@media (max-width: 1800px) {
+  .section {
+    margin-top: 80px;
+  }
+}
