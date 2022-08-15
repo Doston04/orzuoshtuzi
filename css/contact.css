@@ -1,0 +1,202 @@
+#contactTitle {
+  text-transform: uppercase;
+}
+.contactMapContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.mapSection {
+  margin-top: 63px;
+}
+.Map {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  border-radius: 48px;
+  overflow: hidden;
+}
+.contactGrid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+.contact__map {
+  position: relative;
+  flex: 1 1 auto;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.contactMap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contactForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.form__div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form__label {
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--blue);
+}
+.form__input {
+  border: 1px solid var(--light-blue);
+  font-family: "Roboto";
+  padding: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 20px;
+  overflow: hidden;
+  color: var(--blue);
+}
+.form__input:focus {
+  outline: none;
+}
+.form__input::placeholder {
+  color: var(--blue);
+  opacity: 0.64;
+  font-size: 16px;
+  line-height: 24px;
+}
+.submitBtn {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  background-color: var(--pink);
+  border-radius: 20px;
+  border: none;
+  overflow: hidden;
+  color: var(--white);
+  padding: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.submitBtn:hover {
+  background-color: #ca0f79;
+  transition: 0.3s;
+}
+.contactLink {
+  display: flex;
+  gap: 8px;
+}
+#location {
+  max-width: 322px;
+  width: 100%;
+}
+.contactLinkContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+.contactIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--blue);
+}
+.contactLink__value {
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--blue);
+  transition: 0.3s;
+}
+.contactLink__value:hover {
+  color: var(--pink);
+  transition: 0.3s;
+}
+.contactLink__numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (max-width: 1800px) {
+  .Map {
+    height: 480px;
+  }
+  .form__label {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .contactLinkContainer {
+    gap: 24px;
+  }
+  .contactIcon {
+    width: 18px;
+    height: 18px;
+  }
+  #location {
+    max-width: 290px;
+  }
+  .contactLink__value {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Map {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mapSection {
+    margin-top: 40px;
+  }
+  .Map {
+    height: 360px;
+    border-radius: 24px;
+  }
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+  .contact__map {
+    height: 200px;
+    border-radius: 24px;
+  }
+  .contactForm {
+    gap: 24px;
+  }
+  .form__input, .form__input::placeholder, .submitBtn {
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Map {
+    height: 280px;
+  }
+  .form__label {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .contactLinkContainer {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contactForm {
+    gap: 16px;
+  }
+  #location {
+    max-width: 100%;
+  }
+}

@@ -8,7 +8,10 @@
   <title>Orzu Osh Tuzi | Biz haqimizda</title>
   <link rel="stylesheet" href="./css/basics.css">
   <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
   <script src="./js/scripts.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+  <script src="./js/swiper.js" defer></script>
 </head>
 <body class="body">
   <header>
@@ -43,7 +46,49 @@
       </div>
     </div>
     <div class="mobileHeader hidden">
-      <div class="mobileHeader__inner"></div>
+      <div class="mobileHeader__inner container">
+        <nav class="mobileNavigation">
+          <div class="pageLinkDiv">
+            <span class="pageNumber">01</span>
+            <a id="indexLink" class="pageLink" href="./index.html" aria-label="home">Bosh sahifa</a>
+          </div>
+          <div class="pageLinkDiv">
+            <span class="pageNumber">02</span>
+            <a id="aboutLink" class="pageLink" href="./about.html" aria-label="about">Kompaniya</a>
+          </div>
+          <div class="pageLinkDiv">
+            <span class="pageNumber">03</span>
+            <a id="productsLink" class="pageLink" href="./products.html" aria-label="products">Mahsulotlar</a>
+          </div>
+          <div class="pageLinkDiv">
+            <span class="pageNumber">04</span>
+            <a id="newsLink" class="pageLink" href="./news.html" aria-label="news">Yangiliklar</a>
+          </div>
+          <div class="pageLinkDiv">
+            <span class="pageNumber">05</span>
+            <a id="contactLink" class="pageLink" href="./contact.html" aria-label="contact">Bog`lanish</a>
+          </div>
+        </nav>
+        <div class="otherMobileNavigation">
+          <div>
+            <a class="headerPhoneDiv" href="tel:+998951771092">
+              <svg class="phoneIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1827 3.63351C24.256 3.63351 28.368 7.74551 28.368 12.8188M19.1827 8.3535C21.648 8.3535 23.648 10.3522 23.648 12.8188M12.808 19.1535C14.008 20.3042 15.4147 21.2402 16.9693 21.9042L17.6613 22.1988L19.788 20.0388C20.316 19.5028 21.08 19.2708 21.8173 19.4255L26.9693 20.5042C27.8413 20.6895 28.464 21.4588 28.464 22.3495V26.0588C28.464 27.3855 27.3893 28.4602 26.0627 28.4602H24.9227C19.6773 28.4602 14.5013 26.7228 10.5867 23.2322C10.264 22.9455 9.95067 22.6482 9.64533 22.3442L9.69466 22.3935C9.38933 22.0882 9.09333 21.7748 8.80666 21.4522C5.31466 17.5388 3.57733 12.3628 3.57733 7.1175V5.9775C3.57733 4.65084 4.652 3.57617 5.97867 3.57617H9.688C10.5787 3.57617 11.348 4.19884 11.5333 5.07084L12.6133 10.2228C12.7667 10.9588 12.536 11.7242 12 12.2522L9.84 14.3788L10.1347 15.0708C10.7987 16.6242 11.656 17.9535 12.808 19.1535Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="headerPhoneNumber">+99895 177 10 92</span>
+            </a>
+          </div>
+          <div>
+            <a class="headerEmailDiv" href="mailto:info@orzuoshtuzi.uz">
+              <svg class="phoneIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.0947 9.12128L16 19.3239L27.9054 9.12128M24.444 24.8866H7.55603C5.3467 24.8866 3.55603 23.0959 3.55603 20.8866V11.1133C3.55603 8.90395 5.3467 7.11328 7.55603 7.11328H24.4454C26.6547 7.11328 28.4454 8.90395 28.4454 11.1133V20.8879C28.444 23.0959 26.6534 24.8866 24.444 24.8866Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="headerPhoneNumber">info@orzuoshtuzi.uz</span>
+            </a>
+          </div>
+        </div>
+        <img class="saltImage" src="./media/salt.png" alt="salt">
+      </div>
     </div>
   </header>
   <main class="main">
@@ -54,12 +99,12 @@
           <div class="navigationNode">
             <a class="navigationNode__element" href="./index.html">Asosiy</a>
             <span class="navigationNode__element">/</span>
-            <a class="pink" href="./about.html">Biz haqimizda</a>
+            <p class="pink">Biz haqimizda</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="aboutTextSection hidden">
+    <div class="aboutTextSection">
       <div class="section__inner aboutTextSection__inner container">
         <p class="textSection__text">Bugungi kunda "ORZU OSH TUZI" - bu xalq tomonidan tan olingan eng sifatli tuz. "ORZU OSH TUZU" butun O'zbekiston Respublikasi bo'ylab etkazib beriladi. Davlat standartlariga mos keladi. Hozirda kompaniyamiz turli navlarni ishlab chiqarmoqda.</p>
         <p class="textSection__text">ORZU OSH TUZI 1999 yildan beri qazib olish, ishlab chiqarish va yuqori sifatli tuz etkazib beradi. Biz yodlanadigan tuz va oddiy tuz ishlab chiqaramiz. Bizning assortimentimizda yodlangan oziq-ovqat tuzi va oddiy mahsulotlar ulgurji va chakana savdo mavjud. Biz O'zbekistonga tuzni birinchi raqamli import qiluvchisiz.</p>
@@ -67,10 +112,108 @@
         <p class="textSection__text">Mijozlarimiz uchun imkon qadar foydali bo'lish biz uchun muhimdir. Shuning uchun biz sizni bizning ishimiz, mahsulotimiz va ishning siz uchun muhim bo'lgan boshqa jihatlari to'g'risida fikr-mulohazalaringizni biz bilan baham ko'rishga taklif qilamiz. Mijozlarning so'rovlariga tezkor javob berish bizning asosiy afzalliklarimizdan biridir. Doimiy mijozlar o'zlarining hajmlarini iloji boricha tezroq moslashuvchan ravishda oshirib, bozorga moslashuvchan munosabatda bo'lishlari mumkin.</p>
       </div>
     </div>
+    <div class="aboutImg">
+      <div class="aboutImg__inner container">
+        <div class="aboutImg__content"><img src="./media/aboutImg.png" alt="orzuoshtuzi"></div>
+      </div>
+    </div>
+    <div class="aboutStats">
+      <div class="aboutStats__inner container">
+        <div class="aboutStats__content">
+          <div class="stats">
+            <p class="stats__number">15+</p>
+            <p class="stats__text">yildan ortiq O`zbekistonda yetakchi</p>
+          </div>
+          <div class="stats">
+            <p class="stats__number">35 400</p>
+            <p class="stats__text">tonnadan ortiq kuniga ishlab chiqariladi</p>
+          </div>
+          <div class="stats">
+            <p class="stats__number">230+</p>
+            <p class="stats__text">dan ortiq do`konlar bilan ishlash</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="aboutUs" class="section">
       <div class="achievements__inner">
         <p id="sectionTitle" class="sectionTitle">Kompaniya tarixi</p>
         <p class="aboutDesc">Bizning ishimiz rivojlangan xizmat modeli va sifatga e'tiborga asoslangan. "ORZU OSH TUZI" ni tanlab, ishlab chiqarish uzilishlarsiz ishlashiga, buyurtma qilingan tuzning har doim o'z vaqtida etkazib berilishiga, shuningdek bozorda eng yaxshi mahsulot qiymatiga ega bo'lishingizga kafolat olasiz.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__inner container">
+        <p class="sectionTitle">Bizning yutuqlarimiz</p>
+        <p class="sectionDesc">Bizning ishimiz rivojlangan xizmat modeli va sifatga e'tiborga asoslangan. "ORZU OSH TUZI" ni tanlab, ishlab chiqarish uzilishlarsiz ishlashiga, buyurtma qilingan tuzning har doim o'z vaqtida yetkazib berilishiga</p>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiperImageDiv"><img class="swiperImage" src="./media/sertifikat1.png" alt="sertifikat"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiperImageDiv"><img class="swiperImage" src="./media/salt.png" alt="sertifikat"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiperImageDiv"><img class="swiperImage" src="./media/sertifikat2.png" alt="sertifikat"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__inner container">
+        <p class="sectionTitle">Kontakt</p>
+        <div class="contactGrid">
+          <div class="contact__info">
+            <div class="infoStatsContainer">
+              <div class="infoStats">
+                <div class="infoStats__iconDiv">
+                  <svg class="infoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.9973 28.4427C15.9973 28.4427 5.64532 22.2227 5.64532 13.9254C5.64532 8.19735 10.288 3.55469 16.016 3.55469C21.744 3.55469 26.3867 8.19735 26.3867 13.9254C26.3867 22.2227 15.9973 28.4427 15.9973 28.4427Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.016 18.0747C18.3069 18.0747 20.164 16.2176 20.164 13.9267C20.164 11.6358 18.3069 9.77869 16.016 9.77869C13.7251 9.77869 11.868 11.6358 11.868 13.9267C11.868 16.2176 13.7251 18.0747 16.016 18.0747Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="infoStats__info">100075, Toshkent shahar, Olmazor tumani, Usta-Shirin, 1 - tor ko`cha, 254 - yu.</p>
+              </div>
+              <div class="infoStats">
+                <div class="infoStats__iconDiv">
+                  <svg class="infoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.1827 3.63351C24.256 3.63351 28.368 7.74551 28.368 12.8188M19.1827 8.3535C21.648 8.3535 23.648 10.3522 23.648 12.8188M12.808 19.1535C14.008 20.3042 15.4147 21.2402 16.9693 21.9042L17.6613 22.1988L19.788 20.0388C20.316 19.5028 21.08 19.2708 21.8173 19.4255L26.9693 20.5042C27.8413 20.6895 28.464 21.4588 28.464 22.3495V26.0588C28.464 27.3855 27.3893 28.4602 26.0627 28.4602H24.9227C19.6773 28.4602 14.5013 26.7228 10.5867 23.2322C10.264 22.9455 9.95067 22.6482 9.64533 22.3442L9.69466 22.3935C9.38933 22.0882 9.09333 21.7748 8.80666 21.4522C5.31466 17.5388 3.57733 12.3628 3.57733 7.1175V5.9775C3.57733 4.65084 4.652 3.57617 5.97867 3.57617H9.688C10.5787 3.57617 11.348 4.19884 11.5333 5.07084L12.6133 10.2228C12.7667 10.9588 12.536 11.7242 12 12.2522L9.84 14.3788L10.1347 15.0708C10.7987 16.6242 11.656 17.9535 12.808 19.1535Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div id="phoneInfo" class="infoStats__info">
+                  <a href="tel:+998951771092">+99895 177-10-92</a>
+                  <a href="tel:+998911361234">+99891 136-12-34</a>
+                </div>
+              </div>
+              <div class="infoStats">
+                <div class="infoStats__iconDiv">
+                  <svg class="infoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.0947 9.12128L16 19.3239L27.9054 9.12128M24.444 24.8866H7.55603C5.3467 24.8866 3.55603 23.0959 3.55603 20.8866V11.1133C3.55603 8.90395 5.3467 7.11328 7.55603 7.11328H24.4454C26.6547 7.11328 28.4454 8.90395 28.4454 11.1133V20.8879C28.444 23.0959 26.6534 24.8866 24.444 24.8866Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="infoStats__info">
+                  <a href="mailto:info@orzuoshtuzi.uz">info@orzuoshtuzi.uz</a>
+                </div>
+              </div>
+            </div>
+            <div class="infoFormDiv">
+              <p class="callUs">Biz bilan bog`laning</p>
+              <form class="infoForm">
+                <div class="formInputDiv">
+                  <input class="formInput" type="text" placeholder="Ism">
+                  <input class="formInput" type="number" placeholder="Nomer">
+                </div>
+                <button class="submitBtn" type="submit">Jo`natish</button>
+              </form>
+            </div>
+          </div>
+          <div class="contact__map">
+            <div class="contactMap">
+              <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.668371558902!2d69.25363501536204!3d41.35956137926663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c933a900ccd%3A0x4bdc7110b8808631!2sOrzu%20osh%20tuzi!5e0!3m2!1suz!2s!4v1660544420928!5m2!1suz!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>  

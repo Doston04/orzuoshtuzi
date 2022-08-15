@@ -34,10 +34,357 @@
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 32px;
+  color: #353437;
+}
+.aboutImg {
+  margin-top: 48px;
+}
+.aboutImg__content {
+  position: relative;
+  height: 550px;
+  border-radius: 48px;
+  overflow: hidden;
+}
+.aboutImg__content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aboutStats__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 56px;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+  color: var(--blue);
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+}
+.stats__number {
+  font-family: "Exo 2", sans-serif;
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 600;
+}
+.stats__text {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+}
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 43px;
+  margin-top: 56px;
+}
+.contact__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact__map {
+  width: 100%;
+}
+.contactMap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.infoStatsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.infoStats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+.infoStats__iconDiv {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infoStats__info {
+  max-width: 360px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+.infoIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--blue);
+}
+#phoneInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.infoStats__info a {
+  font-family: "Roboto", sans-serif;
+  transition: 0.3s;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+.infoStats__info a:hover {
+  color: var(--pink);
+  transition: 0.3s;
+}
+.infoFormDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 56px;
+}
+.infoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formInputDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.callUs {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--blue);
+  font-weight: 500;
+}
+.formInput {
+  border: 1px solid var(--light-blue);
+  border-radius: 20px;
+  padding: 14px 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--blue);
+}
+.formInput:focus {
+  outline: none;
+}
+.formInput::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--blue);
+}
+.submitBtn {
+  background-color: var(--pink);
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 14px 16px;
+  color: var(--white);
+  font-size: 18px;
+  line-height: 28px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.submitBtn:hover {
+  background-color: #ca0f79;
+  transition: 0.3s;
+}
+/* Swiper */
+.mySwiper {
+  margin-top: 48px;
+}
+.swiper-slide {
+  border: 1px solid var(--light-blue);
+  border-radius: 24px;
+  overflow: hidden; 
+  padding: 16px;
+}
+.swiperImageDiv {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.swiperImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 1800px) {
-  .section {
+  .aboutTextSection__inner {
+    gap: 24px;
+  }
+  .textSection__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #aboutUs {
     margin-top: 80px;
+  }
+  .aboutDesc {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .aboutStats__content {
+    margin-top: 48px;
+  }
+  .aboutImg__content {
+    height: 480px;
+  }
+  .stats__number {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  .stats__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .infoStats__iconDiv {
+    width: 64px;
+    height: 64px;
+  }
+  .infoIcon {
+    width: 24px;
+    height: 24px;
+  }
+  .infoStats__info, .infoStats__info a {
+    max-width: 320px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .formInput, .formInput::placeholder, .submitBtn {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .aboutImg__content {
+    height: 400px;
+  }
+  .stats__number {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .contactGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .mySwiper {
+    margin-top: 24px;
+  }
+  .infoFormDiv {
+    margin-top: 24px;
+  }
+  .infoStats {
+    gap: 16px;
+  }
+  .infoStats__iconDiv {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutTextSection {
+    margin-top: 40px;
+  }
+  .aboutTextSection__inner {
+    gap: 16px;
+  }
+  .aboutImg {
+    margin-top: 40px;
+  }
+  .aboutImg__content {
+    height: 320px;
+    border-radius: 24px;
+  }
+  #aboutUs {
+    margin-top: 40px;
+  }
+  .aboutStats__content {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .aboutDesc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .contactGrid {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+  }
+  #phoneInfo {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .infoStats__info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutImg__content {
+    height: 260px;
+  }
+  .stats__number {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .stats__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .achievements__inner {
+    gap: 16px;
+    padding: 36px 20px;
+  }
+  .aboutDesc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .infoStats__info, .formInput, .formInput::placeholder, .submitBtn,.infoStats__info a {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .infoStatsContainer {
+    gap: 16px;
+  }
+  .infoIcon {
+    width: 20px;
+    height: 20px;
+  }
+  .formInputDiv {
+    grid-template-columns: 1fr;
+  }
+  .callUs {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .formInput {
+    padding: 12px 14px;
   }
 }

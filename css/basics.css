@@ -43,12 +43,29 @@
 a {
   text-decoration: none;
   color: currentColor;
+  transition: 0.3s;
 }
 .pink {
   color: var(--pink);
 }
 .hidden {
   display: none;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .mobileVersion {
   background-color: var(--blue);
@@ -246,7 +263,76 @@ a {
   height: 100%;
   background-color: var(--blue);
   z-index: 1;
-  border: 1px solid white;
+  height: 100%;
+}
+.mobileHeader__inner {
+  animation: fadeIn 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--white);
+}
+.mobileNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  margin-top: 60px;
+}
+.pageLinkDiv {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+.pageLinkDiv:nth-child(1), .pageLinkDiv:nth-child(3), .pageLinkDiv:nth-child(5) {
+  margin-left: 55px;
+}
+.pageNumber {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--white);
+  opacity: 0.4;
+  margin-bottom: 8px;
+}
+.pageLink {
+  font-family: "Roboto", sans-serif;
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 500;
+  color: var(--white);
+  transition: 0.3s;
+}
+.pageLink:hover {
+  color: var(--pink);
+  transition: 0.3s;
+}
+.activeLink {
+  font-style: italic;
+  color: var(--pink);
+}
+.otherMobileNavigation {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-top: 8%;
+}
+.headerEmailDiv {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.1s;
+}
+.headerEmailDiv:hover, .headerPhoneDiv:hover {
+  color: var(--pink);
+  transition: 0.1s; 
+}
+.saltImage {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  width: 50%;
+  height: 70%;
+  mix-blend-mode: lighten;
 }
 /* ===== PAGE-NAVIGATION ===== */
 .pageNavigation__content {
@@ -456,6 +542,26 @@ footer {
     font-size: 16px;
     line-height: 24px;
   }
+  .mobileNavigation {
+    gap: 32px;
+  }
+  .pageNumber {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+  .pageLink {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .otherMobileNavigation {
+    margin-top: 12%;
+  }
+  .saltImage {
+    top: 10%;
+    width: 45%;
+    height: 60%;
+  }
   .section {
     margin-top: 80px;
   }
@@ -496,6 +602,9 @@ footer {
 }
 
 @media(max-width: 1200px) {
+  .otherMobileNavigation {
+    margin-top: 5%;
+  }
   .footer__contact {
     flex-direction: column;
     align-items: flex-start;
@@ -507,6 +616,13 @@ footer {
 }
 
 @media(max-width: 1024px) {
+  .pageLinkDiv {
+    gap: 16px;
+  }
+  .pageLink {
+    font-size: 26px;
+    line-height: 36px;
+  }
   .header__info {
     gap: 24px;
   }
@@ -519,13 +635,34 @@ footer {
 @media(max-width: 768px) {
   .header__inner {
     justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .hamburgerDiv {
     position: relative;
     left: 0;
   }
+  .otherMobileNavigation {
+    margin-top: 3%;
+  }
   .header__info {
     display: none;
+  }
+  .saltImage {
+    display: none;
+  }
+  .pageLinkDiv:nth-child(1), .pageLinkDiv:nth-child(3), .pageLinkDiv:nth-child(5) {
+    margin-left: 30px;
+  }
+  .otherMobileNavigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .mobileNavigation {
+    margin-top: 10px;
+    gap: 24px;
   }
   .pageNavigation__content {
     border-radius: 24px;
@@ -535,9 +672,21 @@ footer {
     font-size: 48px;
     line-height: 52px;
   }
+  .section {
+    margin-top: 40px;
+  }
+  .sectionTitle {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .sectionDesc {
+    font-size: 16px;
+    line-height: 24px;
+  }
   footer {
     border-radius: 24px 24px 0 0;
     padding: 48px 0;
+    margin-top: 40px;
   }
   .footerNav__img {
     display: none;
@@ -583,6 +732,15 @@ footer {
     font-size: 14px;
     line-height: 20px;
     gap: 12px;
+  }
+  .sectionTitle {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .sectionDesc {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 16px;
   }
   .footerIcon {
     width: 20px;

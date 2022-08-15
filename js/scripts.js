@@ -9,6 +9,7 @@ const hamburgerText = document.querySelector(".hamburger__text")
 const headerInfo = document.querySelector(".header__info")
 const languageChanger = document.querySelector(".languageChanger")
 const languagesDiv = document.querySelector(".languagesDiv")
+const body = document.querySelector(".body")
 const blue = "#33348E"
 const white = "#FFFFFF"
 
@@ -44,5 +45,6 @@ hamburgerDiv.addEventListener("click", () => {
   span1.classList.toggle("rotate45deg")
   span2.classList.toggle("span2-hidden")
   span3.classList.toggle("rotate-45deg")
+  body.classList.toggle("overflow-y-hidden")
   toggleText()
 })
