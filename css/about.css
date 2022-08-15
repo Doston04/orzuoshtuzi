@@ -154,6 +154,7 @@
   flex-direction: column;
   gap: 20px;
   margin-top: 56px;
+  width: 100%;
 }
 .infoForm {
   display: flex;
@@ -164,6 +165,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  width: 100%;
 }
 .callUs {
   font-family: "Roboto", sans-serif;
@@ -201,6 +203,7 @@
   border: none;
   transition: 0.3s;
   cursor: pointer;
+  width: 100%;
 }
 .submitBtn:hover {
   background-color: #ca0f79;
@@ -366,7 +369,12 @@
     font-size: 14px;
     line-height: 20px;
   }
-  .infoStats__info, .formInput, .formInput::placeholder, .submitBtn,.infoStats__info a {
+  .infoStats__info, .infoStats__info a {
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 80%;
+  }
+  .formInput, .submitBtn, .formInput::placeholder {
     font-size: 14px;
     line-height: 24px;
   }
@@ -378,11 +386,13 @@
     height: 20px;
   }
   .formInputDiv {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
   .callUs {
     font-size: 18px;
     line-height: 26px;
+    text-align: center;
   }
   .formInput {
     padding: 12px 14px;

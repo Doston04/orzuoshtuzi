@@ -8,31 +8,236 @@
   <title>Orzu Osh Tuzi | Asosiy</title>
   <link rel="stylesheet" href="./css/basics.css">
   <link rel="stylesheet" href="./css/index.css">
-  <script src="./js/scripts.js" defer></script>
+  <link rel="stylesheet" href="./css/news.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <script src="./js/index.js" defer></script>
 </head>
 <body class="body">
-  <div class="hero"></div>
-  <main class="main">
-    <div class="about section">
+  <div class="hero">
+    <div class="hero__inner">
+      <div class="heroHeader">
+        <div class="logoHome" href="./index.html" aria-label="home"><img src="./media/footer-logo.png" alt="logo"></div>
+        <div class="hamburger">
+          <span class="hamburger__spanHome" id="span1"></span>
+          <span class="hamburger__spanHome" id="span2"></span>
+          <span class="hamburger__spanHome" id="span3"></span>
+        </div>
+        <div class="languageChanger">
+          <span>Uz</span>
+          <svg class="chevronDown" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.3609 7.875L10.0034 13.2333L4.64502 7.875" stroke="currentColor" stroke-width="2.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="languagesDivHome hidden">
+            <span class="language">En</span>
+            <span class="language">Chn</span>
+          </div>
+        </div>
+      </div>
+      <div class="heroContent">
+        <div class="heroMainText">
+          <div class="heroContent__title">Orzu osh tuzi - ВЫСШИЙ СОРТ</div>
+          <div class="heroContent__subtitle">Ovqatlanadigan yodlangan tuz deyarli har qanday taomga ajoyib qo'shimcha hisoblanadi</div>
+        </div>
+        <div class="heroNavigation">
+          <a class="moreBtn" href="./products.html">
+            <div class="moreBtn__content">
+              <span>Katalogga o'tish</span>
+              <svg class="arrowRight" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8712 6.36577C16.4807 5.97524 15.8475 5.97524 15.457 6.36577C15.0665 6.75629 15.0665 7.38946 15.457 7.77998L16.8712 6.36577ZM22.5912 13.5L23.2984 14.2071C23.4859 14.0196 23.5912 13.7652 23.5912 13.5C23.5912 13.2348 23.4859 12.9804 23.2984 12.7929L22.5912 13.5ZM15.457 19.22C15.0665 19.6105 15.0665 20.2437 15.457 20.6342C15.8475 21.0248 16.4807 21.0248 16.8712 20.6342L15.457 19.22ZM4.43652 12.5C3.88424 12.5 3.43652 12.9477 3.43652 13.5C3.43652 14.0523 3.88424 14.5 4.43652 14.5V12.5ZM22.5721 14.5C23.1244 14.5 23.5721 14.0523 23.5721 13.5C23.5721 12.9477 23.1244 12.5 22.5721 12.5V14.5ZM15.457 7.77998L21.8841 14.2071L23.2984 12.7929L16.8712 6.36577L15.457 7.77998ZM21.8841 12.7929L15.457 19.22L16.8712 20.6342L23.2984 14.2071L21.8841 12.7929ZM4.43652 14.5H22.5721V12.5H4.43652V14.5Z" fill="currentColor"/>
+              </svg>
+            </div>
+          </a>
+          <nav class="heroNavigation__nav">
+            <span id="homeBtn" class="heroNav__btn">Asosiy sahifa</span>
+            <span id="aboutBtn" class="heroNav__btn">Kompaniya haqida</span>
+            <span id="productsBtn" class="heroNav__btn">Mahsulotlar</span>
+            <span id="newsBtn" class="heroNav__btn">Yangiliklar</span>
+            <span id="contactBtn" class="heroNav__btn">Kontakt</span>
+          </nav>
+        </div>
+        <div class="heroContactDiv">
+          <a class="headerPhoneDiv" href="tel:+998951771092">
+            <svg class="phoneIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.1827 3.63351C24.256 3.63351 28.368 7.74551 28.368 12.8188M19.1827 8.3535C21.648 8.3535 23.648 10.3522 23.648 12.8188M12.808 19.1535C14.008 20.3042 15.4147 21.2402 16.9693 21.9042L17.6613 22.1988L19.788 20.0388C20.316 19.5028 21.08 19.2708 21.8173 19.4255L26.9693 20.5042C27.8413 20.6895 28.464 21.4588 28.464 22.3495V26.0588C28.464 27.3855 27.3893 28.4602 26.0627 28.4602H24.9227C19.6773 28.4602 14.5013 26.7228 10.5867 23.2322C10.264 22.9455 9.95067 22.6482 9.64533 22.3442L9.69466 22.3935C9.38933 22.0882 9.09333 21.7748 8.80666 21.4522C5.31466 17.5388 3.57733 12.3628 3.57733 7.1175V5.9775C3.57733 4.65084 4.652 3.57617 5.97867 3.57617H9.688C10.5787 3.57617 11.348 4.19884 11.5333 5.07084L12.6133 10.2228C12.7667 10.9588 12.536 11.7242 12 12.2522L9.84 14.3788L10.1347 15.0708C10.7987 16.6242 11.656 17.9535 12.808 19.1535Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="headerPhoneNumber">+99895 177 10 92</span>
+          </a>
+          <a class="headerEmailDiv" href="mailto:info@orzuoshtuzi.uz">
+            <svg class="phoneIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.0947 9.12128L16 19.3239L27.9054 9.12128M24.444 24.8866H7.55603C5.3467 24.8866 3.55603 23.0959 3.55603 20.8866V11.1133C3.55603 8.90395 5.3467 7.11328 7.55603 7.11328H24.4454C26.6547 7.11328 28.4454 8.90395 28.4454 11.1133V20.8879C28.444 23.0959 26.6534 24.8866 24.444 24.8866Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="headerPhoneNumber">info@orzuoshtuzi.uz</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div id="about" class="section">
       <div class="section__inner container">
         <p class="sectionTitle">Kompaniya haqida</p>
         <p class="sectionDesc">Bugungi kunda "ORZU OSH TUZI" - bu xalq tomonidan tan olingan eng sifatli tuz. "ORZU OSH TUZU" butun O'zbekiston Respublikasi bo'ylab etkazib beriladi. Davlat standartlariga mos keladi. Hozirda kompaniyamiz turli navlarni ishlab chiqarmoqda</p>
       </div>
     </div>
-    <div class="products section">
+    <div class="aboutImg">
+      <div class="aboutImg__inner container">
+        <div class="aboutImg__content"><img src="./media/aboutImg.png" alt="orzuoshtuzi"></div>
+      </div>
+    </div>
+    <div class="aboutStats">
+      <div class="aboutStats__inner container">
+        <div class="aboutStats__content">
+          <div class="stats">
+            <p class="stats__number">15+</p>
+            <p class="stats__text">yildan ortiq O`zbekistonda yetakchi</p>
+          </div>
+          <div class="stats">
+            <p class="stats__number">35 400</p>
+            <p class="stats__text">tonnadan ortiq kuniga ishlab chiqariladi</p>
+          </div>
+          <div class="stats">
+            <p class="stats__number">230+</p>
+            <p class="stats__text">dan ortiq do`konlar bilan ishlash</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="products" class="section">
       <div class="section__inner container">
         <p class="sectionTitle">Mahsulotlar</p>
         <p class="sectionDesc">Bizning ishimiz rivojlangan xizmat modeli va sifatga e'tiborga asoslangan. "ORZU OSH TUZI" ni tanlab, ishlab chiqarish uzilishlarsiz ishlashiga, buyurtma qilingan tuzning har doim o'z vaqtida etkazib berilishiga, shuningdek bozorda eng yaxshi mahsulot qiymatiga ega bo'lishingizga kafolat olasiz.</p>
       </div>
     </div>
-    <div class="news section">
+    <div id="news" class="section">
       <div class="section__inner container">
         <p class="sectionTitle">Yangiliklar</p>
+        <div class="allNews">
+          <div class="newsDiv">
+            <a class="news" href="./news-inner.html">
+              <div class="newsImage"><img class="newsImage__img" src="./media/heroNews.png" alt="newsImage"></div>
+              <div class="news__content">
+                <div class="calendar">
+                  <svg class="calendar__svg" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.66682 4.44668H11.111M13.3335 4.44668H15.2777C16.6585 4.44668 17.7777 5.56585 17.7777 6.94668V15.2775C17.7777 16.6583 16.6585 17.7775 15.2777 17.7775H4.72266C3.34182 17.7775 2.22266 16.6583 2.22266 15.2775V6.94668C2.22266 5.56585 3.34182 4.44668 4.72266 4.44668M2.22266 10.0008H14.4443M6.66682 6.66752V2.22418M13.3335 6.66752V2.22418" stroke="currentColor" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="calendar__time">14.09.2022</span>
+                </div>
+                <div class="news__info">
+                  <p class="news__title">Yodlangan tuz</p>
+                  <p class="news__desc">Yodlangan tuz Yod bizning metabolizmimizni tartibga soluvchi qalqonsimon bez gormonlarining asosiy tarkibiy qismidir.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="newsDiv">
+            <a class="news" href="./news-inner.html">
+              <div class="newsImage"><img class="newsImage__img" src="./media/heroNews.png" alt="newsImage"></div>
+              <div class="news__content">
+                <div class="calendar">
+                  <svg class="calendar__svg" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.66682 4.44668H11.111M13.3335 4.44668H15.2777C16.6585 4.44668 17.7777 5.56585 17.7777 6.94668V15.2775C17.7777 16.6583 16.6585 17.7775 15.2777 17.7775H4.72266C3.34182 17.7775 2.22266 16.6583 2.22266 15.2775V6.94668C2.22266 5.56585 3.34182 4.44668 4.72266 4.44668M2.22266 10.0008H14.4443M6.66682 6.66752V2.22418M13.3335 6.66752V2.22418" stroke="currentColor" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="calendar__time">14.09.2022</span>
+                </div>
+                <div class="news__info">
+                  <p class="news__title">Yodlangan tuz</p>
+                  <p class="news__desc">Yodlangan tuz Yod bizning metabolizmimizni tartibga soluvchi qalqonsimon bez gormonlarining asosiy tarkibiy qismidir.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="newsDiv">
+            <a class="news" href="./news-inner.html">
+              <div class="newsImage"><img class="newsImage__img" src="./media/contactSalt.png" alt="newsImage"></div>
+              <div class="news__content">
+                <div class="calendar">
+                  <svg class="calendar__svg" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.66682 4.44668H11.111M13.3335 4.44668H15.2777C16.6585 4.44668 17.7777 5.56585 17.7777 6.94668V15.2775C17.7777 16.6583 16.6585 17.7775 15.2777 17.7775H4.72266C3.34182 17.7775 2.22266 16.6583 2.22266 15.2775V6.94668C2.22266 5.56585 3.34182 4.44668 4.72266 4.44668M2.22266 10.0008H14.4443M6.66682 6.66752V2.22418M13.3335 6.66752V2.22418" stroke="currentColor" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="calendar__time">14.09.2022</span>
+                </div>
+                <div class="news__info">
+                  <p class="news__title">Yodlangan tuz</p>
+                  <p class="news__desc">Yodlangan tuz Yod bizning metabolizmimizni tartibga soluvchi qalqonsimon bez gormonlarining asosiy tarkibiy qismidir.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="newsDiv">
+            <a class="news" href="./news-inner.html">
+              <div class="newsImage"><img class="newsImage__img" src="./media/heroNews.png" alt="newsImage"></div>
+              <div class="news__content">
+                <div class="calendar">
+                  <svg class="calendar__svg" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.66682 4.44668H11.111M13.3335 4.44668H15.2777C16.6585 4.44668 17.7777 5.56585 17.7777 6.94668V15.2775C17.7777 16.6583 16.6585 17.7775 15.2777 17.7775H4.72266C3.34182 17.7775 2.22266 16.6583 2.22266 15.2775V6.94668C2.22266 5.56585 3.34182 4.44668 4.72266 4.44668M2.22266 10.0008H14.4443M6.66682 6.66752V2.22418M13.3335 6.66752V2.22418" stroke="currentColor" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="calendar__time">14.09.2022</span>
+                </div>
+                <div class="news__info">
+                  <p class="news__title">Yodlangan tuz</p>
+                  <p class="news__desc">Yodlangan tuz Yod bizning metabolizmimizni tartibga soluvchi qalqonsimon bez gormonlarining asosiy tarkibiy qismidir.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="center"><a class="centerButton" href="./news.html" aria-label="news">Barchasini ko'rish</a></div>
       </div>
     </div>
-    <div class="contact section">
+    <div id="contact" class="section">
       <div class="section__inner container">
         <p class="sectionTitle">Kontakt</p>
+        <div class="contactGrid">
+          <div class="contact__info">
+            <div class="infoStatsContainer">
+              <div class="infoStats">
+                <div class="infoStats__iconDiv">
+                  <svg class="infoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.9973 28.4427C15.9973 28.4427 5.64532 22.2227 5.64532 13.9254C5.64532 8.19735 10.288 3.55469 16.016 3.55469C21.744 3.55469 26.3867 8.19735 26.3867 13.9254C26.3867 22.2227 15.9973 28.4427 15.9973 28.4427Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.016 18.0747C18.3069 18.0747 20.164 16.2176 20.164 13.9267C20.164 11.6358 18.3069 9.77869 16.016 9.77869C13.7251 9.77869 11.868 11.6358 11.868 13.9267C11.868 16.2176 13.7251 18.0747 16.016 18.0747Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="infoStats__info">100075, Toshkent shahar, Olmazor tumani, Usta-Shirin, 1 - tor ko`cha, 254 - yu.</p>
+              </div>
+              <div class="infoStats">
+                <div class="infoStats__iconDiv">
+                  <svg class="infoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.1827 3.63351C24.256 3.63351 28.368 7.74551 28.368 12.8188M19.1827 8.3535C21.648 8.3535 23.648 10.3522 23.648 12.8188M12.808 19.1535C14.008 20.3042 15.4147 21.2402 16.9693 21.9042L17.6613 22.1988L19.788 20.0388C20.316 19.5028 21.08 19.2708 21.8173 19.4255L26.9693 20.5042C27.8413 20.6895 28.464 21.4588 28.464 22.3495V26.0588C28.464 27.3855 27.3893 28.4602 26.0627 28.4602H24.9227C19.6773 28.4602 14.5013 26.7228 10.5867 23.2322C10.264 22.9455 9.95067 22.6482 9.64533 22.3442L9.69466 22.3935C9.38933 22.0882 9.09333 21.7748 8.80666 21.4522C5.31466 17.5388 3.57733 12.3628 3.57733 7.1175V5.9775C3.57733 4.65084 4.652 3.57617 5.97867 3.57617H9.688C10.5787 3.57617 11.348 4.19884 11.5333 5.07084L12.6133 10.2228C12.7667 10.9588 12.536 11.7242 12 12.2522L9.84 14.3788L10.1347 15.0708C10.7987 16.6242 11.656 17.9535 12.808 19.1535Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div id="phoneInfo" class="infoStats__info">
+                  <a href="tel:+998951771092">+99895 177-10-92</a>
+                  <a href="tel:+998911361234">+99891 136-12-34</a>
+                </div>
+              </div>
+              <div class="infoStats">
+                <div class="infoStats__iconDiv">
+                  <svg class="infoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.0947 9.12128L16 19.3239L27.9054 9.12128M24.444 24.8866H7.55603C5.3467 24.8866 3.55603 23.0959 3.55603 20.8866V11.1133C3.55603 8.90395 5.3467 7.11328 7.55603 7.11328H24.4454C26.6547 7.11328 28.4454 8.90395 28.4454 11.1133V20.8879C28.444 23.0959 26.6534 24.8866 24.444 24.8866Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="infoStats__info">
+                  <a href="mailto:info@orzuoshtuzi.uz">info@orzuoshtuzi.uz</a>
+                </div>
+              </div>
+            </div>
+            <div class="infoFormDiv">
+              <p class="callUs">Biz bilan bog`laning</p>
+              <form class="infoForm">
+                <div class="formInputDiv">
+                  <input class="formInput" type="text" placeholder="Ism">
+                  <input class="formInput" type="number" placeholder="Nomer">
+                </div>
+                <button class="submitBtn" type="submit">Jo`natish</button>
+              </form>
+            </div>
+          </div>
+          <div class="contact__map">
+            <div class="contactMap">
+              <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.668371558902!2d69.25363501536204!3d41.35956137926663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c933a900ccd%3A0x4bdc7110b8808631!2sOrzu%20osh%20tuzi!5e0!3m2!1suz!2s!4v1660544420928!5m2!1suz!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
