@@ -7,9 +7,19 @@
   overflow: hidden;
   z-index: 1;
   color: var(--white);
-  background-image: url("../media/homeIntro.png");
+  position: relative;
+  /* background-image: url("../media/homeIntro.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+}
+.hero img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 .hero__inner {
   height: 100vh;
@@ -52,6 +62,15 @@
   width: 81px;
   height: 62px;
 }
+.hamburger {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 .hamburger__spanHome {
   width: 48px;
   height: 2px;
@@ -77,7 +96,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 208px;
+  padding-left: 208px;
 }
 .moreBtn {
   width: 269px;
@@ -173,18 +192,216 @@
   padding: 18px 43.5px;
   border-radius: 20px;
   transition: 0.3s;
+  text-align: center;
 }
 .centerButton:hover {
   color: var(--white);
   background-color: var(--pink);
   transition: 0.3s;
 }
-/* ===== ABOUT ===== */
+
+@media (max-width: 1800px) {
+  .heroMainText {
+    padding-left: 160px;
+  }
+  .heroContent__title {
+    font-size: 64px;
+    line-height: 80px;
+    max-width: 540px;
+  }
+  .heroContent__subtitle {
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 420px;
+  }
+  .heroNavigation {
+    padding-right: 60px;
+    gap: 40px;
+  }
+  .moreBtn {
+    width: 240px;
+    height: 290px;
+    transform: rotate(30deg);
+  }
+  .moreBtn__content {
+    transform: rotate(-30deg);
+  }
+  .heroNav__btn {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .heroMainText {
+    padding-left: 128px;
+  }
+  .heroContent__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .heroNavigation {
+    padding-right: 32px;
+    gap: 32px;
+  }
+  .moreBtn {
+    width: 200px;
+    height: 260px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .moreBtn__content {
+    max-width: fit-content;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .heroContactDiv {
+    gap: 40px;
+  }
+  .heroHeader {
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero__inner {
+    flex-direction: column;
+  }
+  .heroHeader {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    flex-direction: row;
+    justify-content: center;
+    height: max-content;
+    padding: 12px 20px;
+  }
+  .hamburger {
+    position: absolute;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+  }
+  .hamburger__spanHome {
+    width: 32px;
+  }
+  .languageChanger {
+    position: absolute;
+    right: 20px;
+  }
+  .languagesDivHome {
+    bottom: 0;
+    top: 24px;
+  }
+  .heroContactDiv {
+    display: none;
+  }
+  .heroMainText {
+    padding-left: 32px;
+  }
+  .heroContent__title {
+    font-size: 44px;
+    line-height: 48px;
+  }
+  .heroContent__subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 360px;
+  }
+  .moreBtn {
+    width: 160px;
+    height: 200px;
+  }
+  .moreBtn__content {
+    max-width: 100px;
+    align-items: flex-end;
+    gap: 0;
+  }
+  .heroNavigation__nav {
+    gap: 24px;
+  }
+  .heroNav__btn {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 
 @media (max-width: 768px) {
+  .heroContent {
+    flex: none;
+    margin-top: 110px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .heroHeader {
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logoHome {
+    position: relative;
+  }
+  .hamburger {
+    position: relative;
+    left: 0;
+    width: 32px;
+    height: 32px;
+  }
+  .hamburger__spanHome {
+    width: 24px;
+  }
+  .heroNavigation__nav {
+    display: none;
+  }
+  .languageChanger {
+    display: none;
+  }
+  .heroNavigation {
+    padding-right: 0;
+    padding-left: 32px;
+    margin-top: 32px;
+  }
+  .moreBtn {
+    width: 120px;
+    height: 140px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .moreBtn__content {
+    position: relative;
+    max-width: 65px;
+  }
+  .arrowRight {
+    position: absolute;
+    right: 0;
+  }
+  .center {
+    margin-top: 32px;
+  }
   .centerButton {
     font-size: 16px;
     line-height: 24px;
+    width: 100%;
+  }
+  .hero {
+    border-radius: 0 0 40px 40px;
+  }
+  .hero > img {
+    height: 60%;
+    bottom: 0;
+    top: auto;
+  }
+  .heroContent__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .heroContent__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 300px;
   }
 }
 

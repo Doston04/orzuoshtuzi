@@ -164,11 +164,13 @@
     border-radius: 24px;
   }
   .contactGrid {
-    grid-template-columns: 1fr;
-    gap: 64px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+    margin-top: 32px;
   }
   .contact__map {
-    height: 200px;
+    height: 260px;
     border-radius: 24px;
   }
   .contactForm {
@@ -183,15 +185,27 @@
 
 @media (max-width: 600px) {
   .Map {
-    height: 280px;
+    height: 320px;
   }
   .form__label {
     font-size: 16px;
     line-height: 24px;
   }
+  .contactLink {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .contactIcon {
+    width: 24px;
+    height: 24px;
+  }
   .contactLinkContainer {
     flex-direction: column;
     gap: 16px;
+  }
+  .submitBtn {
+    margin-top: 16px;
   }
   .contactForm {
     gap: 16px;

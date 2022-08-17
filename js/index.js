@@ -1,3 +1,18 @@
+const hamburgerDiv = document.querySelector(".hamburger")
+const hamburgerSpans = document.querySelectorAll(".hamburger__span")
+const span1 = document.querySelector("#span1")
+const span2 = document.querySelector("#span2")
+const span3 = document.querySelector("#span3")
+const mobileHeader = document.querySelector(".heroMobileHeader")
+
+hamburgerDiv.addEventListener("click", () => {
+    mobileHeader.classList.toggle("hidden")
+    span1.classList.toggle("rotate45deg")
+    span2.classList.toggle("span2-hidden")
+    span3.classList.toggle("rotate-45deg")
+    body.classList.toggle("overflow-y-hidden")
+})
+
 const homeBtn = document.querySelector("#homeBtn")
 const home = document.querySelector("#home")
 const aboutBtn = document.querySelector("#aboutBtn")

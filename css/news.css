@@ -214,31 +214,38 @@
   }
   .news__title {
     font-size: 18px;
-    line-height: 26px;
+    line-height: 24px;
   }
 }
 
 @media (max-width: 768px) {
   .heroNews, .heroYangilikImage {
     border-radius: 24px;
-    padding: 24px;
+    padding: 20px;
   }
   .heroNews__textDiv {
-    gap: 8px;
+    gap: 4px;
   }
   .heroNews__title, .heroYangilik__title {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 30px;
   }
   .heroNews__subtitle, .news__desc, .heroYangilik__subtitle {
     font-size: 14px;
     line-height: 20px;
+  }
+  .heroNews__content {
+    gap: 10px;
   }
   .newsSection {
     margin-top: 40px;
   }
   .allNews {
     grid-template-columns: 1fr 1fr;
+    margin-top: 32px;
+  }
+  .newsImage {
+    height: 230px;
   }
 }
 
@@ -248,7 +255,7 @@
     gap: 16px;
   }
   .heroNews, .heroYangilikImage {
-    height: 260px;
+    height: 270px;
   }
   .heroNews__content > .calendar {
     color: #F0F0FF;

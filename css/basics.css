@@ -150,7 +150,7 @@ header {
   transition: 0.3s;
 }
 .span2-hidden {
-  transform: translateX(-100%);
+  transform: translateX(-120%);
   transition: 0.3s ease;
 }
 .rotate45deg {
@@ -225,6 +225,7 @@ header {
   font-style: normal;
   font-weight: 500;
   transition: 0.3s;
+  background-color: var(--white);
 }
 .language:hover {
   color: var(--pink);
@@ -370,7 +371,6 @@ header {
   gap: 20px;
   font-size: 24px;
   line-height: 28px;
-  padding: 0 20px;
 }
 .navigationNode__element {
   color: var(--white);
@@ -405,13 +405,19 @@ footer {
   width: 250px;
   height: 250px;
 }
-.footerNav__img img {
+.footerNav__img img, .footerNav__imgMobile img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.footerNav__imgMobile {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: none;
 }
 .footerNav__link {
   font-size: 20px;
@@ -421,6 +427,9 @@ footer {
 .footerNav__link:hover {
   color: var(--pink);
   transition: 0.3s;
+}
+#footerHomeLink, #contactText {
+  display: none;
 }
 .footer__contact {
   display: flex;
@@ -582,7 +591,7 @@ footer {
     height: 60%;
   }
   .section {
-    margin-top: 80px;
+    margin-top: 72px;
   }
   .sectionTitle {
     font-size: 56px;
@@ -614,6 +623,10 @@ footer {
   .footerIcon {
     width: 24px;
     height: 24px;
+  }
+   #emailIcon {
+    width: 32px;
+    height: 30px;
   }
   .footerContactText {
     max-width: 340px;
@@ -654,12 +667,21 @@ footer {
 @media(max-width: 768px) {
   .header__inner {
     justify-content: space-between;
-    padding-top: 0;
-    padding-bottom: 0;
+    flex-direction: row-reverse;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
   .hamburgerDiv {
     position: relative;
     left: 0;
+  }
+  .hamburger {
+    position: static;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .otherMobileNavigation {
     margin-top: 3%;
@@ -685,14 +707,15 @@ footer {
   }
   .pageNavigation__content {
     border-radius: 24px;
-    padding: 64px 0;
+    padding: 46px 20px;
+    gap: 8px;
   }
   .pageName {
     font-size: 48px;
     line-height: 52px;
   }
-  .section {
-    margin-top: 40px;
+  #innerPageName {
+    text-align: left;
   }
   .sectionTitle {
     font-size: 48px;
@@ -702,42 +725,70 @@ footer {
     font-size: 16px;
     line-height: 24px;
   }
+  .socialMedia {
+    margin-top: 8px;
+  }
   footer {
     border-radius: 24px 24px 0 0;
-    padding: 48px 0;
+    padding: 40px 0;
     margin-top: 40px;
   }
   .footerNav__img {
     display: none;
   }
-  .footer__nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  .footerNav__imgMobile {
+    display: block;
+    margin-bottom: 16px;
   }
-  .footerNav__link, .smText, .numberDiv__number, .footerContactText {
+  .footer__nav {
+    column-gap: 40px;
+    row-gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #footerHomeLink, #contactText {
+    display: contents;
+  }
+  .footerNav__link {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+  .footerContactText {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 22px;
+    max-width: 290px;
+  }
+  .smText, .numberDiv__number {
+    font-size: 14px;
+    line-height: 22px;
   }
   .footer__contact {
-    margin-top: 48px;
-    gap: 16px;
+    border-top: 1px solid #E3E3FF;
+    margin-top: 32px;
+    padding-top: 16px;
+    gap: 10px;
   }
   .footer__info {
+    border-top: 1px solid #E3E3FF;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    margin-top: 48px;
+    gap: 32px;
+    margin-top: 32px;
+    padding-top: 16px;
   }
 }
 
 @media(max-width: 600px) {
+  .logo {
+    width: 75px;
+    height: 56px;
+  }
   .hamburger__span {
     width: 24px;
   }
   .hamburger__text {
-    font-size: 18px;
-    line-height: 26px;
+    display: none;
   }
   .pageName {
     font-size: 32px;
@@ -746,7 +797,8 @@ footer {
   .navigationNode {
     font-size: 14px;
     line-height: 20px;
-    gap: 12px;
+    column-gap: 12px;
+    row-gap: 4px;
   }
   .sectionTitle {
     font-size: 32px;
@@ -754,12 +806,8 @@ footer {
   }
   .sectionDesc {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 22px;
     margin-top: 16px;
-  }
-  .footerIcon {
-    width: 20px;
-    height: 20px;
   }
   .ndcLogoDiv {
     flex-direction: row;

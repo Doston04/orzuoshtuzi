@@ -1,5 +1,5 @@
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1.2,
+  slidesPerView: 1.6,
   spaceBetween: 16,
   autoplay: {
     delay: 2400,
@@ -9,7 +9,7 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   breakpoints: {
     600: {
-      slidesPerView: 1.5,
+      slidesPerView: 2.5,
       spaceBetween: 16,
     },
     768: {
