@@ -260,11 +260,11 @@ header {
 /* ===== MOBILE-HEADER ===== */
 .mobileHeader {
   position: fixed;
+  padding-top: 20px;
   width: 100%;
   height: 100%;
   background-color: var(--blue);
   z-index: 99;
-  height: 100%;
 }
 .mobileHeader__inner {
   animation: fadeIn 0.5s ease;
@@ -334,6 +334,33 @@ header {
   width: 50%;
   height: 70%;
   mix-blend-mode: lighten;
+}
+.mobileLanguageChanger {
+  display: none;
+  padding: 4px;
+  background-color: var(--white);
+  border-radius: 24px;
+  margin-bottom: 44px;
+  color: #1B1C2F;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 22px;
+}
+.languageChangerLink {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.linkActivated {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 24px;
+  padding: 9px 22px;
+}
+.mobileLogo {
+  display: none;
 }
 /* ===== PAGE-NAVIGATION ===== */
 .pageNavigation__content {
@@ -686,14 +713,18 @@ footer {
   .otherMobileNavigation {
     margin-top: 3%;
   }
+  .pageLinkDiv:nth-child(1), .pageLinkDiv:nth-child(3), .pageLinkDiv:nth-child(5) {
+    margin: 0;
+  }
+  .mobileLanguageChanger {
+    display: flex;
+    display: -webkit-flex;
+  }
   .header__info {
     display: none;
   }
   .saltImage {
     display: none;
-  }
-  .pageLinkDiv:nth-child(1), .pageLinkDiv:nth-child(3), .pageLinkDiv:nth-child(5) {
-    margin-left: 30px;
   }
   .otherMobileNavigation {
     flex-direction: column;
@@ -703,7 +734,7 @@ footer {
   }
   .mobileNavigation {
     margin-top: 10px;
-    gap: 24px;
+    gap: 40px;
   }
   .pageNavigation__content {
     border-radius: 24px;
@@ -783,6 +814,15 @@ footer {
   .logo {
     width: 75px;
     height: 56px;
+  }
+  .pageNumber {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 3px;
+  }
+  .pageLink {
+    font-size: 18px;
+    line-height: 24px;
   }
   .hamburger__span {
     width: 24px;

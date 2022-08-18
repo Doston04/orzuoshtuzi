@@ -10,6 +10,8 @@ const headerInfo = document.querySelector(".header__info")
 const languageChanger = document.querySelector(".languageChanger")
 const languagesDiv = document.querySelector(".languagesDiv")
 const body = document.querySelector(".body")
+const normalLogo = document.querySelector(".normalLogo")
+const mobileLogo = document.querySelector(".mobileLogo")
 const blue = "#33348E"
 const white = "#FFFFFF"
 
@@ -26,6 +28,8 @@ const toggleText = () => {
     hamburgerSpans.forEach(hamburgerSpan => {
       hamburgerSpan.style.backgroundColor = blue
     })
+    mobileLogo.style.display = "none"
+    normalLogo.style.display = "inline"
     hamburgerText.style.color = blue
     clicked = false
   } else {
@@ -35,6 +39,8 @@ const toggleText = () => {
     hamburgerSpans.forEach(hamburgerSpan => {
       hamburgerSpan.style.backgroundColor = white
     })
+    mobileLogo.style.display = "inline"
+    normalLogo.style.display = "none"
     hamburgerText.style.color = white
     clicked = true
   }

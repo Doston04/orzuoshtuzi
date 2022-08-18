@@ -4,6 +4,7 @@ const span1 = document.querySelector("#span1")
 const span2 = document.querySelector("#span2")
 const span3 = document.querySelector("#span3")
 const mobileHeader = document.querySelector(".heroMobileHeader")
+const body = document.querySelector(".body")
 
 hamburgerDiv.addEventListener("click", () => {
     mobileHeader.classList.toggle("hidden")

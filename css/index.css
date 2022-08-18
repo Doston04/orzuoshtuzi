@@ -113,9 +113,14 @@
   line-height: 32px;
   font-weight: 500;
 }
+.moreBtn:hover .arrowRight {
+  transform: translateX(10px);
+  transition: 0.3s;
+}
 .arrowRight {
   width: 27px;
   height: 27px;
+  transition: 0.3s;
 }
 .moreBtn__content {
   transform: rotate(-48.61deg);
@@ -198,6 +203,15 @@
   color: var(--white);
   background-color: var(--pink);
   transition: 0.3s;
+}
+
+/* ===== Mobile Header ===== */
+.heroMobileHeader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue);
 }
 
 @media (max-width: 1800px) {
@@ -330,6 +344,9 @@
 }
 
 @media (max-width: 768px) {
+  .mobileHeader__inner {
+    margin-top: 110px;
+  }
   .heroContent {
     flex: none;
     margin-top: 110px;

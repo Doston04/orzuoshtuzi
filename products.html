@@ -20,7 +20,10 @@
         </div>
         <span class="hamburger__text">Menu</span>
       </div>
-      <div class="logo"><a href="./index.html"><img src="./media/logo.png" alt="logo"></a></div>
+      <div class="logo">
+        <a class="normalLogo" href="./index.html"><img src="./media/logo.png" alt="logo"></a>
+        <a class="mobileLogo" href="./index.html"><img src="./media/footer-logo.png" alt="logo"></a>
+      </div>
       <div class="header__info">
         <div class="languageChanger">
           <span>Uz</span>
@@ -43,6 +46,10 @@
     </div>
     <div class="mobileHeader hidden">
       <div class="mobileHeader__inner container">
+        <div class="mobileLanguageChanger">
+          <a class="languageChangerLink linkActivated" href="#" aria-label="uz">O`zbekcha</a>
+          <a class="languageChangerLink" href="#" aria-label="ru">Русский</a>
+        </div> 
         <nav class="mobileNavigation">
           <div class="pageLinkDiv">
             <span class="pageNumber">01</span>
@@ -58,7 +65,7 @@
           </div>
           <div class="pageLinkDiv">
             <span class="pageNumber">04</span>
-            <a id="newsLink" class="pageLink activeLink" href="./news.html" aria-label="news">Yangiliklar</a>
+            <a id="newsLink" class="pageLink" href="./news.html" aria-label="news">Yangiliklar</a>
           </div>
           <div class="pageLinkDiv">
             <span class="pageNumber">05</span>
