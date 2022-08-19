@@ -24,6 +24,7 @@ const toggleText = () => {
   if (clicked) {
     hamburgerText.innerHTML = "Menu"
     header.style.background = white
+    header.style.boxShadow = "0 15px 45px rgba(0, 0, 0, 0.1)"
     headerInfo.style.color = blue
     hamburgerSpans.forEach(hamburgerSpan => {
       hamburgerSpan.style.backgroundColor = blue
@@ -35,6 +36,7 @@ const toggleText = () => {
   } else {
     hamburgerText.innerHTML = "Yopish"
     header.style.background = blue
+    header.style.boxShadow = "none"
     headerInfo.style.color = white
     hamburgerSpans.forEach(hamburgerSpan => {
       hamburgerSpan.style.backgroundColor = white

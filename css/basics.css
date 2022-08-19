@@ -9,11 +9,11 @@
   --pink: #E3188B;
   --white: #FFFFFF;   
 }
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 12px;
   background-color:#E0E0E0;
 }
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--blue);
 }
 @keyframes fadeIn {
@@ -66,6 +66,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 .main {
   flex: 1 1 auto;
@@ -695,8 +696,6 @@ footer {
   .header__inner {
     justify-content: space-between;
     flex-direction: row-reverse;
-    padding-top: 12px;
-    padding-bottom: 12px;
   }
   .hamburgerDiv {
     position: relative;

@@ -39,6 +39,9 @@
 .aboutImg {
   margin-top: 48px;
 }
+.aboutImg__inner {
+  position: relative;
+}
 .aboutImg__content {
   position: relative;
   height: 550px;

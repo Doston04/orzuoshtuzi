@@ -5,6 +5,18 @@ const span2 = document.querySelector("#span2")
 const span3 = document.querySelector("#span3")
 const mobileHeader = document.querySelector(".heroMobileHeader")
 const body = document.querySelector(".body")
+const mobileHeader__inner = document.querySelector(".mobileHeader__inner")
+
+let clicked = false
+const toggleFunction = () => {
+    if (clicked) {
+        mobileHeader.style.display = "none"
+        clicked = false
+    } else {
+        mobileHeader.style.display = "flex"
+        clicked = true
+    }
+}
 
 hamburgerDiv.addEventListener("click", () => {
     mobileHeader.classList.toggle("hidden")
@@ -12,7 +24,14 @@ hamburgerDiv.addEventListener("click", () => {
     span2.classList.toggle("span2-hidden")
     span3.classList.toggle("rotate-45deg")
     body.classList.toggle("overflow-y-hidden")
+    toggleFunction()
 })
+
+if (window.innerWidth <= 768) {
+    mobileHeader__inner.classList.add("container")
+} else {
+    mobileHeader.classList.remove("container")
+}
 
 const homeBtn = document.querySelector("#homeBtn")
 const home = document.querySelector("#home")
