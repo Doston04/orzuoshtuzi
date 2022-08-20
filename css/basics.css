@@ -696,6 +696,8 @@ footer {
   .header__inner {
     justify-content: space-between;
     flex-direction: row-reverse;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
   .hamburgerDiv {
     position: relative;
