@@ -130,7 +130,7 @@
         <p class="sectionTitle">Kompaniya haqida</p>
         <div class="mobileMoreBtnDiv">
           <p id="aboutDesc" class="sectionDesc">Bugungi kunda "ORZU OSH TUZI" - bu xalq tomonidan tan olingan eng sifatli tuz. "ORZU OSH TUZU" butun O'zbekiston Respublikasi bo'ylab etkazib beriladi. Davlat standartlariga mos keladi. Hozirda kompaniyamiz turli navlarni ishlab chiqarmoqda</p>
-          <a href="#" class="more">
+          <a id="aboutTextMore" href="#" class="more">
             <div class="more__inner">
               <span>Batafsil</span>
               <svg class="arrowRight" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,16 +145,16 @@
       <div class="aboutImg__inner container">
         <div class="aboutImg__content">
           <img src="./media/aboutImg.png" alt="orzuoshtuzi">
+          <a id="aboutImgMore" href="#" class="more">
+            <div class="more__inner">
+              <span>Batafsil</span>
+              <svg class="arrowRight" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8712 6.36577C16.4807 5.97524 15.8475 5.97524 15.457 6.36577C15.0665 6.75629 15.0665 7.38946 15.457 7.77998L16.8712 6.36577ZM22.5912 13.5L23.2984 14.2071C23.4859 14.0196 23.5912 13.7652 23.5912 13.5C23.5912 13.2348 23.4859 12.9804 23.2984 12.7929L22.5912 13.5ZM15.457 19.22C15.0665 19.6105 15.0665 20.2437 15.457 20.6342C15.8475 21.0248 16.4807 21.0248 16.8712 20.6342L15.457 19.22ZM4.43652 12.5C3.88424 12.5 3.43652 12.9477 3.43652 13.5C3.43652 14.0523 3.88424 14.5 4.43652 14.5V12.5ZM22.5721 14.5C23.1244 14.5 23.5721 14.0523 23.5721 13.5C23.5721 12.9477 23.1244 12.5 22.5721 12.5V14.5ZM15.457 7.77998L21.8841 14.2071L23.2984 12.7929L16.8712 6.36577L15.457 7.77998ZM21.8841 12.7929L15.457 19.22L16.8712 20.6342L23.2984 14.2071L21.8841 12.7929ZM4.43652 14.5H22.5721V12.5H4.43652V14.5Z" fill="currentColor"/>
+              </svg>
+            </div>
+          </a>
         </div>
       </div>
-      <a href="#" class="more absolute">
-        <div class="more__inner">
-          <span>Batafsil</span>
-          <svg class="arrowRight" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.8712 6.36577C16.4807 5.97524 15.8475 5.97524 15.457 6.36577C15.0665 6.75629 15.0665 7.38946 15.457 7.77998L16.8712 6.36577ZM22.5912 13.5L23.2984 14.2071C23.4859 14.0196 23.5912 13.7652 23.5912 13.5C23.5912 13.2348 23.4859 12.9804 23.2984 12.7929L22.5912 13.5ZM15.457 19.22C15.0665 19.6105 15.0665 20.2437 15.457 20.6342C15.8475 21.0248 16.4807 21.0248 16.8712 20.6342L15.457 19.22ZM4.43652 12.5C3.88424 12.5 3.43652 12.9477 3.43652 13.5C3.43652 14.0523 3.88424 14.5 4.43652 14.5V12.5ZM22.5721 14.5C23.1244 14.5 23.5721 14.0523 23.5721 13.5C23.5721 12.9477 23.1244 12.5 22.5721 12.5V14.5ZM15.457 7.77998L21.8841 14.2071L23.2984 12.7929L16.8712 6.36577L15.457 7.77998ZM21.8841 12.7929L15.457 19.22L16.8712 20.6342L23.2984 14.2071L21.8841 12.7929ZM4.43652 14.5H22.5721V12.5H4.43652V14.5Z" fill="currentColor"/>
-          </svg>
-        </div>
-      </a>
     </div>
     <div class="aboutStats">
       <div class="aboutStats__inner container">
@@ -216,9 +216,58 @@
         </div>
       </div>
     </div>
-    <div class="productSection">
+    <div class="productSection hidden">
       <div class="productSection__inner">
-        <div class="product"></div>
+        <div class="product">
+          <div class="productImageDiv"></div>
+          <div class="productContentDiv">
+            <div class="productInfoDiv"></div>
+            <div class="otherProductsDiv">
+              <div class="productMini">
+                <div class="productMini__content">
+                  <p class="productMini__title">Orzu osh tuzi - высший сорт</p>
+                  <div class="productMini__weight">
+                    <p>250 gr</p>
+                    <div class="arrowRightDiv">
+                      <svg class="productMini__arrow" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.8712 6.36577C16.4807 5.97524 15.8475 5.97524 15.457 6.36577C15.0665 6.75629 15.0665 7.38946 15.457 7.77998L16.8712 6.36577ZM22.5912 13.5L23.2984 14.2071C23.4859 14.0196 23.5912 13.7652 23.5912 13.5C23.5912 13.2348 23.4859 12.9804 23.2984 12.7929L22.5912 13.5ZM15.457 19.22C15.0665 19.6105 15.0665 20.2437 15.457 20.6342C15.8475 21.0248 16.4807 21.0248 16.8712 20.6342L15.457 19.22ZM4.43652 12.5C3.88424 12.5 3.43652 12.9477 3.43652 13.5C3.43652 14.0523 3.88424 14.5 4.43652 14.5V12.5ZM22.5721 14.5C23.1244 14.5 23.5721 14.0523 23.5721 13.5C23.5721 12.9477 23.1244 12.5 22.5721 12.5V14.5ZM15.457 7.77998L21.8841 14.2071L23.2984 12.7929L16.8712 6.36577L15.457 7.77998ZM21.8841 12.7929L15.457 19.22L16.8712 20.6342L23.2984 14.2071L21.8841 12.7929ZM4.43652 14.5H22.5721V12.5H4.43652V14.5Z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="productMini__image"><img src="./media/test.png" alt="test"></div>
+              </div>
+              <div class="productMini activeProductMini">
+                <div class="productMini__content">
+                  <p class="productMini__title">Orzu osh tuzi - высший сорт</p>
+                  <div class="productMini__weight">
+                    <p>250 gr</p>
+                    <div class="arrowRightDiv">
+                      <svg class="productMini__arrow" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.8712 6.36577C16.4807 5.97524 15.8475 5.97524 15.457 6.36577C15.0665 6.75629 15.0665 7.38946 15.457 7.77998L16.8712 6.36577ZM22.5912 13.5L23.2984 14.2071C23.4859 14.0196 23.5912 13.7652 23.5912 13.5C23.5912 13.2348 23.4859 12.9804 23.2984 12.7929L22.5912 13.5ZM15.457 19.22C15.0665 19.6105 15.0665 20.2437 15.457 20.6342C15.8475 21.0248 16.4807 21.0248 16.8712 20.6342L15.457 19.22ZM4.43652 12.5C3.88424 12.5 3.43652 12.9477 3.43652 13.5C3.43652 14.0523 3.88424 14.5 4.43652 14.5V12.5ZM22.5721 14.5C23.1244 14.5 23.5721 14.0523 23.5721 13.5C23.5721 12.9477 23.1244 12.5 22.5721 12.5V14.5ZM15.457 7.77998L21.8841 14.2071L23.2984 12.7929L16.8712 6.36577L15.457 7.77998ZM21.8841 12.7929L15.457 19.22L16.8712 20.6342L23.2984 14.2071L21.8841 12.7929ZM4.43652 14.5H22.5721V12.5H4.43652V14.5Z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="productMini__image"><img src="./media/test.png" alt="test"></div>
+              </div>
+              <div class="productMini">
+                <div class="productMini__content">
+                  <p class="productMini__title">Orzu osh tuzi - высший сорт</p>
+                  <div class="productMini__weight">
+                    <p>250 gr</p>
+                    <div class="arrowRightDiv">
+                      <svg class="productMini__arrow" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.8712 6.36577C16.4807 5.97524 15.8475 5.97524 15.457 6.36577C15.0665 6.75629 15.0665 7.38946 15.457 7.77998L16.8712 6.36577ZM22.5912 13.5L23.2984 14.2071C23.4859 14.0196 23.5912 13.7652 23.5912 13.5C23.5912 13.2348 23.4859 12.9804 23.2984 12.7929L22.5912 13.5ZM15.457 19.22C15.0665 19.6105 15.0665 20.2437 15.457 20.6342C15.8475 21.0248 16.4807 21.0248 16.8712 20.6342L15.457 19.22ZM4.43652 12.5C3.88424 12.5 3.43652 12.9477 3.43652 13.5C3.43652 14.0523 3.88424 14.5 4.43652 14.5V12.5ZM22.5721 14.5C23.1244 14.5 23.5721 14.0523 23.5721 13.5C23.5721 12.9477 23.1244 12.5 22.5721 12.5V14.5ZM15.457 7.77998L21.8841 14.2071L23.2984 12.7929L16.8712 6.36577L15.457 7.77998ZM21.8841 12.7929L15.457 19.22L16.8712 20.6342L23.2984 14.2071L21.8841 12.7929ZM4.43652 14.5H22.5721V12.5H4.43652V14.5Z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="productMini__image"><img src="./media/test.png" alt="test"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="bannerSection">
