@@ -241,20 +241,20 @@
   position: absolute;
   bottom: -70px;
   right: -20px;
+  backdrop-filter: blur(5px);
 }
 .more {
-  width: 230px;
-  height: 265px;
+  width: 200px;
+  height: 200px;
   transform: rotate(48deg);
   border: 1px solid var(--pink);
-  backdrop-filter: blur(5px);
-  background-color: rgba(227, 24, 139, 0.1);
   color: var(--pink);
   border-radius: 50%;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  padding: 20px;
 }
 .more__inner {
   display: flex;
@@ -266,16 +266,142 @@
   line-height: 32px;
 }
 .more:hover {
-  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.2);
+  background-color: rgba(227, 24, 139, 0.1);
+  /* box-shadow: 0 30px 45px rgba(0, 0, 0, 0.2); */
   transition: 0.3s;
+}
+.more:hover .arrowRight {
+  transform: translateX(10px);
+  transition: 0.3s;
+}
+/* ===== PRODUCTS ===== */
+.advantagesBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+.advantage {
+  width: 100%;
+  border: 1px solid var(--light-blue);
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.advantageIcon {
+  width: 72px;
+  height: 72px;
+  background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.advantage__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--blue);
+}
+.advantageText {
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #353437;
+}
+/* ===== BANNER ===== */
+.bannerSection {
+  margin-top: 123px;
+}
+.banner {
+  width: 100%;
+  height: 430px;
+  background-color: var(--light-blue);
+  border-radius: 48px;
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  gap: 57px;
+  padding: 0 70px;
+}
+.bannerText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--blue);
+  width: 100%;
+}
+.bannerTitle {
+  font-family: "Exo 2";
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: 700;
+  font-style: italic;
+  max-width: 440px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.bannerSubtitle {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 490px;
+  width: 100%;
+}
+#bannerTextMore {
+  display: none;
+}
+.bannerImage {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  width: 60%;
+}
+.bottleFront {
+  position: absolute;
+  top: -15%;
+  left: 30%;
+  z-index: -1;
+  width: 320px;
+  height: 560px;
+  object-fit: cover;
+  /* border: 1px solid red; */
+}
+.bottleBack {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  width: 170px;
+  height: 300px;
+  object-fit: cover;
+  /* border: 1px solid black; */
+  z-index: -2;
+}
+/* ===== PRODUCT-SECTION ===== */
+.productSection {
+  margin-top: 65px;
+}
+.productSection__inner {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* border: 1px solid var(--blue); */
+}
+.product {
+  padding: 56px 100px;
+  background-color: #E9E9EA;
+  border-radius: 56px;
 }
 
 @media (max-width: 1800px) {
   .more {
     width: 180px;
-    height: 210px;
-    bottom: -50px;
-    right: 10px;
+    height: 200px;
   }
   .mobileHeader__inner {
     padding-left: 100px;
@@ -326,6 +452,22 @@
     width: 40%;
     height: 60%;
   }
+  .advantageText {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .banner {
+    height: 400px;
+  }
+  .bottleFront {
+    width: 300px;
+    height: 500px;
+    top: -8%;
+  }
+  .bottleBack {
+    width: 140px;
+    left: 15%;
+  }
 }
 
 @media (max-width: 1240px) {
@@ -360,6 +502,41 @@
   }
   .heroHeader {
     padding: 8px 0;
+  }
+  .advantageText {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .banner {
+    height: 360px;
+    gap: 24px;
+    padding: 0 48px;
+  }
+  .bannerTitle {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .bannerSubtitle {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 440px;
+  }
+  .bottleFront {
+    width: 260px;
+    height: 440px;
+    top: -5%;
+  }
+  .bottleBack {
+    height: 260px;
+    left: 10%;
+  }
+  .more {
+    width: 160px;
+    height: 180px;
+  }
+  .more__inner {
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
@@ -439,19 +616,49 @@
     font-size: 18px;
     line-height: 26px;
   }
+  .advantagesBlock {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .banner {
+    height: 300px;
+    gap: 36px;
+  }
+  .bannerTitle {
+    font-size: 32px;
+    line-height: 36px;
+    max-width: 360px;
+  }
+  .bannerSubtitle {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 380px;
+  }
+  .more {
+    width: 120px;
+    height: 140px;
+  }
+  .more__inner {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .arrowRight {
+    width: 20px;
+    height: 20px;
+  }
+  .bottleFront {
+    left: -15%;
+    height: 280px;
+    top: 5%;
+  }
+  .bottleBack {
+    left: 0;
+    top: 30%;
+    height: 100px;
+    width: 60px;    
+  }
 }
 
 @media (max-width: 768px) {
-  .more {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    width: 140px;
-    height: 160px;
-    font-size: 14px;
-    line-height: 24px;
-    transform: rotate(45deg);
-  }
   .absolute {
     display: none;
   }
@@ -469,7 +676,7 @@
     padding-left: 0;
   }
   .mobileHeader__inner {
-    margin-top: 36px;
+    margin-top: 106px;
   }
   .heroContent {
     flex: none;
@@ -544,11 +751,114 @@
     line-height: 20px;
     max-width: 300px;
   }
+  .advantagesBlock {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .advantage {
+    gap: 8px;
+    padding: 16px;
+  }
+  .advantageIcon {
+    width: 48px;
+    height: 48px;
+  }
+  .advantage__icon {
+    width: 24px;
+    height: 24px;
+  }
+  .advantageText {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .bannerSection {
+    margin-top: 72px;
+  }
+  .banner {
+    display: -webkit-flex;
+    flex-direction: column;
+    height: 480px;
+    padding: 16px;
+    border-radius: 24px;
+    gap: 0;
+  }
+  #bannerMore {
+    display: none;
+  }
+  #bannerTextMore {
+    display: flex;
+  }
+  .extraBannerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bannerText {
+    gap: 12px;
+  }
+  .bannerSubtitle {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 445px;
+    color: #353437;
+  }
+  .bannerTitle {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    font-style: normal;
+    max-width: 100%;
+  }
+  .bannerImage {
+    height: 330px;
+    width: 100%;
+  }
+  .more {
+    width: 110px;
+    height: 130px;
+  }
+  .more__inner {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .bottleFront {
+    height: 400px;
+    top: -20%;
+    left: 30%;
+    width: 320px;
+  }
+  .bottleBack {
+    width: 100px;
+    height: 200px;
+    left: 30%;
+    top: 5%;
+  }
 }
 
 @media (max-width: 600px) {
+  .more {
+    width: 110px;
+    height: 120px;
+  }
+  .mobileHeader__inner {
+    margin-top: 20px;
+  }
   .centerButton {
     font-size: 14px;
     line-height: 20px;
+  }
+  .bottleFront {
+    width: 180px;
+    height: 310px;
+    top: -15%;
+  }
+  .bannerTitle {
+    font-size: 20px;
+    text-align: center;
+  }
+  .bannerSubtitle {
+    max-width: 245px;
   }
 }

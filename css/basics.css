@@ -16,6 +16,9 @@
 ::-webkit-scrollbar-thumb {
   background-color: var(--blue);
 }
+html {
+  overflow-x: hidden;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;

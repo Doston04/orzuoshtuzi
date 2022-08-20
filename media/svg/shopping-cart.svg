@@ -1,0 +1,5 @@
+<svg class="advantage__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.38151 11.1134H33.3315L28.8865 21.1234H10.4632M4.62891 6.66675H8.88891L10.6156 22.2151C10.8972 24.7467 13.0372 26.6634 15.5856 26.6634H28.5956" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="14.5839" cy="33.334" rx="2.22707" ry="2.22707" fill="currentColor"/>
+<circle cx="25.4237" cy="33.334" r="2.22707" fill="currentColor"/>
+</svg>

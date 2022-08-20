@@ -482,6 +482,9 @@
     padding: 10px 13px;
     border: 1px solid #EBEBEB;
     border-radius: 16px;
+    min-width: 120px;
+    align-items: center;
+    justify-content: center;
   }
   .filter__name {
     font-weight: 400;
