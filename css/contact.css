@@ -10,11 +10,11 @@
   margin-top: 63px;
 }
 .Map {
-  position: relative;
   width: 100%;
   height: 560px;
   border-radius: 48px;
   overflow: hidden;
+  border: none;
 }
 .contactGrid {
   margin-top: 40px;
