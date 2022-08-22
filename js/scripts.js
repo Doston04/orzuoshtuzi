@@ -56,3 +56,14 @@ hamburgerDiv.addEventListener("click", () => {
   body.classList.toggle("overflow-y-hidden")
   toggleText()
 })
+
+let lastScrollTop = 0;
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    header.style.top = "-128px";
+  } else {
+    header.style.top = "0";
+  }
+  lastScrollTop = scrollTop
+})

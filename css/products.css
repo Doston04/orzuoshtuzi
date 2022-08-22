@@ -147,14 +147,18 @@
 .aboutProductSection {
   margin-top: 64px;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  max-height: 800px;
   height: 100%;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
 }
 .productNavigation {
   display: flex;
   flex-direction: column;
   gap: 44px;
+  background-color: #fff;
 }
 .activeSquare {
   border: 2px solid var(--pink);
@@ -197,7 +201,7 @@
 .mainProduct {
   flex: 1 1 auto;
   margin: 0 136px;
-  overflow-y: scroll;
+  /* background-color: lightskyblue;   */
 }
 ::-webkit-scrollbar {
   display: none;
@@ -269,6 +273,7 @@
   max-width: 320px;
   width: 100%;
   color: #020105;
+  background-color: #fff;
 }
 .productName {
   font-family: "Exo 2";
@@ -334,9 +339,6 @@
 }
 
 @media (max-width: 1800px) {
-  .aboutProductSection {
-    height: 520px;
-  }
   .productLink {
     padding: 24px;
   }
