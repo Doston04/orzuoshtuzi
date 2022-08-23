@@ -24,39 +24,3 @@ productImageBtn.addEventListener("click", () => {
   productInfoBtn.classList.remove("activeSquare")
 })
 
-const aboutProductSection = document.querySelector(".aboutProductSection")
-const productNavigation = document.querySelector(".productNavigation")
-const productMainInfo = document.querySelector(".productMainInfo")
-const mainProduct = document.querySelector(".mainProduct")
-console.log(productNavigation.scrollWidth, productMainInfo.scrollWidth);
-console.log(mainProduct.scrollWidth);
-
-
-// window.addEventListener("scroll", () => {
-//   if (this.scrollY >= 460) {
-//     productNavigation.style.cssText = `
-//       position: absolute;
-//       left: 20px;
-//       top: ${window.scrollY - 480}px;
-//     `
-//     productMainInfo.style.cssText = `
-//       position: absolute;
-//       right: 20px;
-//       top: ${window.scrollY - 480}px;
-//     `
-//     mainProduct.style.cssText = `
-//       max-width: 640px;
-//       margin: 0 auto;
-//     `
-//   } else {
-//     productNavigation.style.position = "static"
-//     productMainInfo.style.position = "static"
-//   }
-//   if (this.scrollY >= aboutProductSection.scrollHeight + 65) {
-//     productMainInfo.style.cssText = `
-//       bottom: 0;
-//       top: inherit;
-//     `
-//   }
-// })
-

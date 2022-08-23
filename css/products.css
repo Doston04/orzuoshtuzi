@@ -150,9 +150,7 @@
   align-items: flex-start;
   justify-content: space-between;
   height: 100%;
-  border: 1px solid black;
   position: relative;
-  overflow: hidden;
 }
 .productNavigation {
   display: flex;
@@ -201,10 +199,18 @@
 .mainProduct {
   flex: 1 1 auto;
   margin: 0 136px;
-  /* background-color: lightskyblue;   */
+  overflow-y: scroll;
+  max-height: 650px;
+  height: 100%;
 }
 ::-webkit-scrollbar {
-  display: none;
+  width: 4px;
+  border-radius: 4px;
+  background-color: var(--white);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #EBEBEB;
+  border-radius: 8px;
 }
 .productMainImageSection {
   position: relative;
