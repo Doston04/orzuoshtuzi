@@ -24,3 +24,18 @@ productImageBtn.addEventListener("click", () => {
   productInfoBtn.classList.remove("activeSquare")
 })
 
+const callBtn = document.querySelector(".callBtn__inner")
+const modal = document.querySelector(".modal")
+const modalContent = document.querySelector(".modal__inner")
+
+callBtn.addEventListener("click", () => {
+  modal.style.display = "flex"
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target == modal) {
+    modal.style.display = "none"
+  } else if (e.target == modalContent) {
+    modal.style.display = "flex"
+  }
+});

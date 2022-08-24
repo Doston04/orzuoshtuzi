@@ -83,27 +83,27 @@ productMinis.forEach((productMini, index) => {
   });
 });
 
-const mobileMiniProducts = document.querySelectorAll(".mobileMiniProduct")
-const miniActiveProductImageDivs = document.querySelectorAll(".miniActiveProductImageDiv")
-const miniTitles = document.querySelectorAll(".miniTitle")
+// const mobileMiniProducts = document.querySelectorAll(".mobileMiniProduct")
+// const miniActiveProductImageDivs = document.querySelectorAll(".miniActiveProductImageDiv")
+// const miniTitles = document.querySelectorAll(".miniTitle")
 
-mobileMiniProducts.forEach((product, index) => {
-  product.addEventListener("click", () => {
-    mobileMiniProducts.forEach(mobileProduct => {
-      mobileProduct.classList.remove("activeProductMini");
-    })
-    miniTitles.forEach(title => {
-      title.classList.remove("isActive");
-    });
-    miniActiveProductImageDivs.forEach(miniActiveProductImageDiv => {
-      miniActiveProductImageDiv.classList.remove("isActive");
-    });
+// mobileMiniProducts.forEach((product, index) => {
+//   product.addEventListener("click", () => {
+//     mobileMiniProducts.forEach(mobileProduct => {
+//       mobileProduct.classList.remove("activeProductMini");
+//     })
+//     miniTitles.forEach(title => {
+//       title.classList.remove("isActive");
+//     });
+//     miniActiveProductImageDivs.forEach(miniActiveProductImageDiv => {
+//       miniActiveProductImageDiv.classList.remove("isActive");
+//     });
 
-    mobileMiniProducts[index].classList.add("activeProductMini")
-    miniActiveProductImageDivs[index].classList.add("isActive")
-    miniTitles[index].classList.add("isActive")
-  });
-});
+//     mobileMiniProducts[index].classList.add("activeProductMini")
+//     miniActiveProductImageDivs[index].classList.add("isActive")
+//     miniTitles[index].classList.add("isActive")
+//   });
+// });
 
 const currentYearSpan = document.querySelector(".currentYear");
 const currentYear = new Date().getFullYear();

@@ -3,52 +3,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
+
 :root {
-  --blue: #33348E; 
+  --blue: #33348E;
   --light-blue: #E3E3FF;
   --pink: #E3188B;
-  --white: #FFFFFF;   
+  --white: #FFFFFF;
 }
+
 ::-webkit-scrollbar {
   width: 12px;
-  background-color:#E0E0E0;
+  background-color: #E0E0E0;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--blue);
 }
+
 html {
   overflow-x: hidden;
   overscroll-behavior: none;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
-  100% { 
+
+  100% {
     opacity: 1;
   }
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
   scroll-behavior: smooth;
 }
+
 a {
   text-decoration: none;
   color: currentColor;
   transition: 0.3s;
 }
+
 .pink {
   color: var(--pink);
 }
+
 .hidden {
   display: none;
 }
+
 .overflow-y-hidden {
   overflow: hidden;
 }
+
 .map {
   position: absolute;
   top: 0;
@@ -57,34 +71,41 @@ a {
   height: 100%;
   object-fit: cover;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 .mobileVersion {
   background-color: var(--blue);
   color: var(--white);
 }
+
 .body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 .main {
   flex: 1 1 auto;
   margin-top: 158px;
 }
+
 .container {
   max-width: 1340px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .section {
   margin-top: 144px;
 }
+
 .sectionTitle {
   font-family: "Exo 2", sans-serif;
   font-size: 64px;
@@ -94,6 +115,7 @@ input::-webkit-inner-spin-button {
   width: 100%;
   text-align: center;
 }
+
 .sectionDesc {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
@@ -104,6 +126,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   margin-top: 24px;
 }
+
 /* ===== HEADER ===== */
 header {
   position: fixed;
@@ -115,6 +138,7 @@ header {
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
 }
+
 .header__inner {
   position: relative;
   display: flex;
@@ -123,6 +147,7 @@ header {
   padding-top: 18px;
   padding-bottom: 28px;
 }
+
 .hamburgerDiv {
   display: flex;
   align-items: center;
@@ -133,6 +158,7 @@ header {
   z-index: 4;
   overflow: hidden;
 }
+
 .hamburger__text {
   font-family: 'Nunito', sans-serif;
   font-size: 22px;
@@ -141,6 +167,7 @@ header {
   color: var(--blue);
   transition: 0.3s;
 }
+
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -148,6 +175,7 @@ header {
   cursor: pointer;
   position: relative;
 }
+
 .hamburger__span {
   width: 48px;
   height: 2px;
@@ -155,25 +183,30 @@ header {
   border-radius: 4px;
   transition: 0.3s;
 }
+
 .span2-hidden {
   transform: translateX(-120%);
   transition: 0.3s ease;
 }
+
 .rotate45deg {
   position: absolute;
   transform: rotate(45deg);
   transition: 0.3s;
 }
+
 .rotate-45deg {
   position: absolute;
   transform: rotate(-45deg);
   transition: 0.3s;
 }
+
 .logo {
   position: relative;
   width: 106px;
   height: 82px;
 }
+
 .logo img {
   position: absolute;
   top: 0;
@@ -182,6 +215,7 @@ header {
   height: 100%;
   object-fit: cover;
 }
+
 .header__info {
   position: absolute;
   right: 20px;
@@ -190,6 +224,7 @@ header {
   gap: 56px;
   color: var(--blue);
 }
+
 .languageChanger {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
@@ -203,6 +238,7 @@ header {
   transition: 0.3s;
   position: relative;
 }
+
 .languagesDiv {
   position: absolute;
   top: 20px;
@@ -217,15 +253,18 @@ header {
   z-index: 2;
   transition: 0.3s;
 }
+
 .languageChanger:hover .languagesDiv {
   animation: fadeIn 0.3s ease;
   display: flex;
   transition: 0.3s;
 }
+
 .languageChanger:hover .chevronDown {
   transform: rotate(180deg);
   transition: 0.3s;
 }
+
 .language {
   padding: 12px;
   font-style: normal;
@@ -233,36 +272,43 @@ header {
   transition: 0.3s;
   background-color: var(--white);
 }
+
 .language:hover {
   color: var(--pink);
   transition: 0.3s;
 }
+
 .chevronDown {
   width: 20px;
   height: 20px;
   transition: 0.3s;
 }
+
 .headerPhoneDiv {
   display: flex;
   align-items: center;
   gap: 12px;
-  cursor: pointer; 
+  cursor: pointer;
 }
+
 .headerPhoneDiv:hover .phoneIcon {
   animation: phoneRing 0.5s ease infinite;
 }
-.headerPhoneNumber{ 
+
+.headerPhoneNumber {
   font-family: "Roboto Flex", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
   transition: 0.3s;
 }
+
 .phoneIcon {
   width: 28px;
   height: 28px;
   transition: 0.3s;
 }
+
 /* ===== MOBILE-HEADER ===== */
 .mobileHeader {
   position: fixed;
@@ -272,6 +318,7 @@ header {
   background-color: var(--blue);
   z-index: 99;
 }
+
 .mobileHeader__inner {
   animation: fadeIn 0.5s ease;
   display: flex;
@@ -279,20 +326,26 @@ header {
   justify-content: space-between;
   color: var(--white);
 }
+
 .mobileNavigation {
   display: flex;
   flex-direction: column;
   gap: 56px;
   margin-top: 60px;
 }
+
 .pageLinkDiv {
   display: flex;
   align-items: flex-end;
   gap: 24px;
 }
-.pageLinkDiv:nth-child(1), .pageLinkDiv:nth-child(3), .pageLinkDiv:nth-child(5) {
+
+.pageLinkDiv:nth-child(1),
+.pageLinkDiv:nth-child(3),
+.pageLinkDiv:nth-child(5) {
   margin-left: 55px;
 }
+
 .pageNumber {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
@@ -301,6 +354,7 @@ header {
   opacity: 0.4;
   margin-bottom: 8px;
 }
+
 .pageLink {
   font-family: "Roboto", sans-serif;
   font-size: 56px;
@@ -309,30 +363,37 @@ header {
   color: var(--white);
   transition: 0.3s;
 }
+
 .pageLink:hover {
   color: var(--pink);
   transition: 0.3s;
 }
+
 .activeLink {
   font-style: italic;
   color: var(--pink);
 }
+
 .otherMobileNavigation {
   display: flex;
   align-items: center;
   gap: 64px;
   margin-top: 8%;
 }
+
 .headerEmailDiv {
   display: flex;
   align-items: center;
   gap: 12px;
   transition: 0.1s;
 }
-.headerEmailDiv:hover, .headerPhoneDiv:hover {
+
+.headerEmailDiv:hover,
+.headerPhoneDiv:hover {
   color: var(--pink);
-  transition: 0.1s; 
+  transition: 0.1s;
 }
+
 .saltImage {
   position: absolute;
   top: 5%;
@@ -341,6 +402,7 @@ header {
   height: 70%;
   mix-blend-mode: lighten;
 }
+
 .mobileLanguageChanger {
   display: none;
   padding: 4px;
@@ -352,6 +414,7 @@ header {
   font-size: 14px;
   line-height: 22px;
 }
+
 .languageChangerLink {
   width: 100%;
   display: -webkit-flex;
@@ -359,15 +422,18 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 .linkActivated {
   background-color: var(--blue);
   color: var(--white);
   border-radius: 24px;
   padding: 9px 22px;
 }
+
 .mobileLogo {
   display: none;
 }
+
 /* ===== PAGE-NAVIGATION ===== */
 .pageNavigation__content {
   background-color: var(--blue);
@@ -380,6 +446,7 @@ header {
   gap: 16px;
   padding: 70px 0 70px 0;
 }
+
 .pageName {
   font-family: "Exo 2", sans-serif;
   font-size: 64px;
@@ -392,10 +459,11 @@ header {
   text-align: center;
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
+
 .navigationNode {
   font-family: "Inter", sans-serif;
   display: flex;
@@ -405,15 +473,45 @@ header {
   font-size: 24px;
   line-height: 28px;
 }
+
 .navigationNode__element {
   color: var(--white);
   opacity: 0.8;
   transition: 0.3s;
 }
+
 .navigationNode__element:hover {
   opacity: 1;
   transition: 0.3s;
 }
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.centerButton {
+  font-family: "Exo 2";
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--pink);
+  border: 1px solid var(--pink);
+  padding: 18px 43.5px;
+  border-radius: 20px;
+  transition: 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.centerButton:hover {
+  color: var(--white);
+  background-color: var(--pink);
+  transition: 0.3s;
+}
+
 /* ===== CONTACT ===== */
 /* ===== FOOTER ===== */
 footer {
@@ -424,21 +522,26 @@ footer {
   padding: 8px 0 100px 0;
   font-family: "Inter", sans-serif;
 }
+
 .footer__inner {
   display: flex;
   flex-direction: column;
 }
+
 .footer__nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
+
 .footerNav__img {
   position: relative;
   width: 250px;
   height: 250px;
 }
-.footerNav__img img, .footerNav__imgMobile img {
+
+.footerNav__img img,
+.footerNav__imgMobile img {
   position: absolute;
   top: 0;
   left: 0;
@@ -446,24 +549,30 @@ footer {
   height: 100%;
   object-fit: cover;
 }
+
 .footerNav__imgMobile {
   position: relative;
   width: 96px;
   height: 96px;
   display: none;
 }
+
 .footerNav__link {
   font-size: 20px;
   line-height: 24px;
   transition: 0.3s;
 }
+
 .footerNav__link:hover {
   color: var(--pink);
   transition: 0.3s;
 }
-#footerHomeLink, #contactText {
+
+#footerHomeLink,
+#contactText {
   display: none;
 }
+
 .footer__contact {
   display: flex;
   align-items: center;
@@ -471,15 +580,18 @@ footer {
   justify-content: space-between;
   margin-top: 20px;
 }
+
 .footerIcon {
   width: 32px;
   height: 32px;
 }
+
 .footerContact__location {
   display: flex;
   gap: 8px;
   cursor: pointer;
 }
+
 .footerContactText {
   max-width: 490px;
   font-size: 24px;
@@ -487,25 +599,30 @@ footer {
   width: 100%;
   font-weight: 500;
 }
+
 .footerContact__numbers {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 .numberDiv__number {
   transition: 0.3s;
   font-weight: 500;
 }
+
 .numberDiv__number:hover {
   color: var(--pink);
   transition: 0.3s;
 }
+
 .footerNumberDiv {
   display: flex;
   flex-direction: column;
   font-size: 24px;
   line-height: 40px;
 }
+
 .footerContact__email {
   display: flex;
   align-items: center;
@@ -513,30 +630,36 @@ footer {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .footerContact__email:hover {
   color: var(--pink);
   transition: 0.3s;
 }
+
 .footer__info {
   margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .copyrightDiv {
   display: flex;
   gap: 12px;
 }
+
 .smText {
   font-size: 18px;
   line-height: 24px;
 }
+
 .socialMedia {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-top: 16px;
 }
+
 .socialMediaDiv {
   width: 36px;
   height: 36px;
@@ -545,30 +668,36 @@ footer {
   justify-content: center;
   transition: 0.3s;
 }
+
 .socialMediaDiv:hover {
   background-color: var(--pink);
   transition: 0.3s;
 }
+
 .socialMediaIcon {
   width: 24px;
   height: 24px;
   transition: 0.3s;
 }
+
 .ndcLogoDiv {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
 }
+
 .ndcLogo {
   width: 78px;
   height: 24px;
 }
+
 .aboutNdc {
   font-size: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
+
 .currentYear {
   font-size: 10px;
   line-height: 16px;
@@ -578,89 +707,114 @@ footer {
   .main {
     margin-top: 108px;
   }
+
   .header__inner {
     padding-top: 0;
     padding-bottom: 0;
   }
+
   .hamburgerDiv {
     gap: 6px;
   }
+
   .hamburger {
     gap: 6px;
   }
+
   .hamburger__span {
     width: 32px;
   }
+
   .languageChanger {
     font-size: 16px;
     line-height: 24px;
   }
+
   .phoneIcon {
     width: 24px;
     height: 24px;
   }
+
   .headerPhoneNumber {
     font-size: 16px;
     line-height: 24px;
   }
+
   .mobileNavigation {
     gap: 32px;
   }
+
   .pageNumber {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 5px;
   }
+
   .pageLink {
     font-size: 32px;
     line-height: 40px;
   }
+
   .otherMobileNavigation {
     margin-top: 12%;
   }
+
   .saltImage {
     top: 10%;
     width: 45%;
     height: 60%;
   }
+
   .section {
     margin-top: 72px;
   }
+
   .sectionTitle {
     font-size: 56px;
     line-height: 64px;
   }
+
   .sectionDesc {
     max-width: 780px;
     font-size: 18px;
     line-height: 26px;
   }
+
   .navigationNode {
     font-size: 16px;
     line-height: 24px;
     gap: 16px;
   }
+
   footer {
     margin-top: 80px;
     border-radius: 48px 48px 0 0;
     padding: 8px 0 60px 0;
   }
+
   .footerNav__img {
     width: 200px;
     height: 200px;
   }
-  .footerNav__link, .smText, .numberDiv__number, .footerContactText {
+
+  .footerNav__link,
+  .smText,
+  .numberDiv__number,
+  .footerContactText {
     font-size: 16px;
     line-height: 24px;
   }
+
   .footerIcon {
     width: 24px;
     height: 24px;
   }
-   #emailIcon {
+
+  #emailIcon {
     width: 32px;
     height: 30px;
   }
+
   .footerContactText {
     max-width: 340px;
   }
@@ -670,11 +824,13 @@ footer {
   .otherMobileNavigation {
     margin-top: 5%;
   }
+
   .footer__contact {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
   }
+
   .footerContactText {
     max-width: 360px;
   }
@@ -684,13 +840,16 @@ footer {
   .pageLinkDiv {
     gap: 16px;
   }
+
   .pageLink {
     font-size: 26px;
     line-height: 36px;
   }
+
   .header__info {
     gap: 24px;
   }
+
   .pageName {
     font-size: 52px;
     line-height: 60px;
@@ -704,10 +863,12 @@ footer {
     padding-top: 12px;
     padding-bottom: 12px;
   }
+
   .hamburgerDiv {
     position: relative;
     left: 0;
   }
+
   .hamburger {
     position: static;
     width: 32px;
@@ -716,96 +877,136 @@ footer {
     align-items: center;
     justify-content: center;
   }
+
   .otherMobileNavigation {
     margin-top: 3%;
   }
-  .pageLinkDiv:nth-child(1), .pageLinkDiv:nth-child(3), .pageLinkDiv:nth-child(5) {
+
+  .pageLinkDiv:nth-child(1),
+  .pageLinkDiv:nth-child(3),
+  .pageLinkDiv:nth-child(5) {
     margin: 0;
   }
+
   .mobileLanguageChanger {
     display: flex;
     display: -webkit-flex;
   }
+
   .header__info {
     display: none;
   }
+
+  .center {
+    margin-top: 32px;
+  }
+
+  .centerButton {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+  }
+
   .saltImage {
     display: none;
   }
+
   .otherMobileNavigation {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
     margin-top: 48px;
   }
+
   .mobileNavigation {
     margin-top: 10px;
     gap: 40px;
   }
+
   .pageNavigation__content {
     border-radius: 24px;
     padding: 46px 20px;
     gap: 8px;
   }
+
   .pageName {
     font-size: 48px;
     line-height: 52px;
   }
+
   #innerPageName {
     text-align: left;
   }
+
   .sectionTitle {
     font-size: 48px;
     line-height: 52px;
   }
+
   .sectionDesc {
     font-size: 16px;
     line-height: 24px;
   }
+
   .socialMedia {
     margin-top: 8px;
   }
+
   footer {
     border-radius: 24px 24px 0 0;
     padding: 40px 0;
     margin-top: 40px;
   }
+
   .footerNav__img {
     display: none;
   }
+
   .footerNav__imgMobile {
     display: block;
     margin-bottom: 16px;
   }
+
   .footer__nav {
-    column-gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    /* column-gap: 40px;
     row-gap: 24px;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-start; */
   }
-  #footerHomeLink, #contactText {
+
+  #footerHomeLink,
+  #contactText {
     display: contents;
   }
+
   .footerNav__link {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
   }
+
   .footerContactText {
     font-size: 14px;
     line-height: 22px;
     max-width: 290px;
   }
-  .smText, .numberDiv__number {
+
+  .smText,
+  .numberDiv__number {
     font-size: 14px;
     line-height: 22px;
   }
+
   .footer__contact {
     border-top: 1px solid #E3E3FF;
     margin-top: 32px;
     padding-top: 16px;
     gap: 10px;
   }
+
   .footer__info {
     border-top: 1px solid #E3E3FF;
     flex-direction: column;
@@ -817,53 +1018,69 @@ footer {
 }
 
 @media(max-width: 600px) {
+  .centerButton {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   .logo {
     width: 75px;
     height: 56px;
   }
+
   .pageNumber {
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 3px;
   }
+
   .pageLink {
     font-size: 18px;
     line-height: 24px;
   }
+
   .hamburger__span {
     width: 24px;
   }
+
   .hamburger__text {
     display: none;
   }
+
   .pageName {
     font-size: 32px;
     line-height: 40px;
   }
+
   .navigationNode {
     font-size: 14px;
     line-height: 20px;
     column-gap: 12px;
     row-gap: 4px;
   }
+
   .sectionTitle {
     font-size: 32px;
     line-height: 40px;
   }
+
   .sectionDesc {
     font-size: 14px;
     line-height: 22px;
     margin-top: 16px;
   }
+
   .ndcLogoDiv {
     flex-direction: row;
     align-items: center;
     gap: 16px;
   }
+
   .currentYear {
     font-size: 14px;
     line-height: 20px;
   }
+
   .copyrightDiv {
     flex-direction: column;
     gap: 16px;
