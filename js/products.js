@@ -47,3 +47,11 @@ window.addEventListener("click", (e) => {
   }
 });
 
+var element = document.querySelector("#phoneInput")
+var phoneMask = IMask(element, {
+  mask: '+{998}(00)000-00-00',
+  lazy: false
+});
+
+
+

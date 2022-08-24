@@ -57,6 +57,12 @@ hamburgerDiv.addEventListener("click", () => {
   toggleText()
 })
 
+var element = document.querySelector("#phoneInput")
+var phoneMask = IMask(element, {
+  mask: '+{998}(00)000-00-00',
+  lazy: false,
+});
+
 if (window.innerWidth > 768) {
   let lastScrollTop = 0;
   window.addEventListener("scroll", () => {
@@ -69,3 +75,4 @@ if (window.innerWidth > 768) {
     lastScrollTop = scrollTop
   })
 }
+

@@ -230,7 +230,7 @@
   flex: 1 1 auto;
   margin: 0 136px;
   overflow-y: scroll;
-  max-height: 650px;
+  max-height: 700px;
   height: 100%;
 }
 
@@ -391,7 +391,13 @@
 }
 
 .callBtn__inner:hover {
-  background-color: #ca0f79;
+  box-shadow: 0 10px 30px rgba(239, 28, 148, 0.5);
+  transition: 0.3s;
+}
+
+.callBtn__inner:active,
+.submitBtn:active {
+  transform: scale(0.95);
   transition: 0.3s;
 }
 
@@ -420,11 +426,26 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  border-radius: 32px;
 }
 
 .modalForm {
-  max-width: 450px;
+  max-width: 660px;
+  width: 100%;
   margin-top: 48px;
+}
+
+.textarea {
+  height: 150px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.textarea::placeholder {
+  position: absolute;
+  top: 16px;
+  left: 16px;
 }
 
 .modalTitle {
@@ -442,8 +463,74 @@
   right: 36px;
   width: 36px;
   height: 36px;
-  color: #020105;
+  color: var(--blue);
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.closeBtn:active {
+  transform: scale(0.75);
+  transition: 0.3s;
+}
+
+.circlesDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+
+.circle {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 8px;
+  background-color: rgba(227, 24, 139, 0.08);
+}
+
+.circleTextDiv {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+#lastChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+}
+
+.key {
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.value {
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.circleSvg {
+  width: 48px;
+  height: 48px;
+}
+
+.gridModal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
 @media (max-width: 1800px) {
@@ -572,6 +659,34 @@
 }
 
 @media (max-width: 1024px) {
+  .circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .key {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .value {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .circlesDiv {
+    gap: 8px;
+  }
+
+  .circleSvg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circleTextDiv {
+    align-items: center;
+  }
+
   .allProducts__inner {
     margin-top: 32px;
   }
@@ -615,6 +730,7 @@
     max-width: 100%;
     height: 100%;
     justify-content: center;
+    border-radius: 0;
   }
 
   .allProducts__inner {
@@ -734,6 +850,11 @@
     text-align: center;
   }
 
+  .gridModal {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .closeBtn {
     top: 24px;
     right: 24px;
@@ -805,5 +926,16 @@
 
   .productImage__div {
     height: 182px;
+  }
+}
+
+@media (max-width: 400px) {
+  .circlesDiv {
+    flex-direction: column;
+  }
+
+  .circle {
+    width: 160px;
+    height: 160px;
   }
 }

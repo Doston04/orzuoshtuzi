@@ -2,9 +2,11 @@
   background-color: var(--blue);
   margin-top: 144px;
 }
+
 #sectionTitle {
   color: var(--white);
 }
+
 .aboutDesc {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
@@ -15,6 +17,7 @@
   text-align: center;
   opacity: 0.8;
 }
+
 .achievements__inner {
   display: flex;
   flex-direction: column;
@@ -22,32 +25,39 @@
   color: var(--white);
   padding: 72px;
 }
+
 .aboutTextSection {
   margin-top: 60px;
 }
+
 .aboutTextSection__inner {
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
+
 .textSection__text {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 32px;
   color: #353437;
 }
+
 .aboutImg {
   margin-top: 48px;
 }
+
 .aboutImg__inner {
   position: relative;
 }
+
 .aboutImg__content {
   position: relative;
   height: 550px;
   border-radius: 48px;
   /* overflow: hidden; */
 }
+
 .aboutImg__content img {
   position: absolute;
   top: 0;
@@ -57,11 +67,13 @@
   object-fit: cover;
   border-radius: 48px;
 }
+
 .aboutStats__content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 56px;
 }
+
 .stats {
   display: flex;
   flex-direction: column;
@@ -70,35 +82,41 @@
   gap: 8px;
   align-items: center;
 }
+
 .stats__number {
   font-family: "Exo 2", sans-serif;
   font-size: 64px;
   line-height: 72px;
   font-weight: 600;
 }
+
 .stats__text {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 28px;
   text-align: center;
 }
+
 .contactGrid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 43px;
   margin-top: 56px;
 }
+
 .contact__info {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
+
 .contact__map {
   width: 100%;
   border-radius: 24px;
   height: 100%;
   overflow: hidden;
 }
+
 .contactMap {
   position: relative;
   width: 100%;
@@ -106,17 +124,20 @@
   border-radius: 24px;
   overflow: hidden;
 }
+
 .infoStatsContainer {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
+
 .infoStats {
   display: flex;
   align-items: center;
   gap: 24px;
   width: 100%;
 }
+
 .infoStats__iconDiv {
   width: 72px;
   height: 72px;
@@ -127,6 +148,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .infoStats__info {
   max-width: 360px;
   width: 100%;
@@ -135,16 +157,19 @@
   font-size: 18px;
   line-height: 28px;
 }
+
 .infoIcon {
   width: 32px;
   height: 32px;
   color: var(--blue);
 }
+
 #phoneInfo {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
+
 .infoStats__info a {
   font-family: "Roboto", sans-serif;
   transition: 0.3s;
@@ -152,10 +177,12 @@
   font-size: 18px;
   line-height: 28px;
 }
+
 .infoStats__info a:hover {
   color: var(--pink);
   transition: 0.3s;
 }
+
 .infoFormDiv {
   display: flex;
   flex-direction: column;
@@ -163,17 +190,20 @@
   margin-top: 56px;
   width: 100%;
 }
+
 .infoForm {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .formInputDiv {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   width: 100%;
 }
+
 .callUs {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
@@ -181,6 +211,7 @@
   color: var(--blue);
   font-weight: 500;
 }
+
 .formInput {
   border: 1px solid var(--light-blue);
   border-radius: 20px;
@@ -190,15 +221,18 @@
   line-height: 28px;
   color: var(--blue);
 }
+
 .formInput:focus {
   outline: none;
 }
+
 .formInput::placeholder {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 28px;
   color: var(--blue);
 }
+
 .submitBtn {
   background-color: var(--pink);
   font-weight: 500;
@@ -212,20 +246,29 @@
   cursor: pointer;
   width: 100%;
 }
+
 .submitBtn:hover {
-  background-color: #ca0f79;
+  box-shadow: 0 10px 30px rgba(239, 28, 148, 0.5);
   transition: 0.3s;
 }
+
+.submitBtn:active {
+  transform: scale(0.95);
+  transition: 0.3s;
+}
+
 /* Swiper */
 .mySwiper {
   margin-top: 48px;
 }
+
 .swiper-slide {
   border: 1px solid var(--light-blue);
   border-radius: 24px;
-  overflow: hidden; 
+  overflow: hidden;
   padding: 16px;
 }
+
 .swiperImageDiv {
   position: relative;
   width: 100%;
@@ -233,6 +276,7 @@
   border-radius: 16px;
   overflow: hidden;
 }
+
 .swiperImage {
   position: absolute;
   top: 0;
@@ -246,45 +290,59 @@
   .aboutTextSection__inner {
     gap: 24px;
   }
+
   .textSection__text {
     font-size: 16px;
     line-height: 24px;
   }
+
   #aboutUs {
     margin-top: 72px;
   }
+
   .aboutDesc {
     font-size: 18px;
     line-height: 26px;
   }
+
   .aboutStats__content {
     margin-top: 48px;
   }
+
   .aboutImg__content {
     height: 480px;
   }
+
   .stats__number {
     font-size: 56px;
     line-height: 64px;
   }
+
   .stats__text {
     font-size: 16px;
     line-height: 24px;
   }
+
   .infoStats__iconDiv {
     width: 64px;
     height: 64px;
   }
+
   .infoIcon {
     width: 24px;
     height: 24px;
   }
-  .infoStats__info, .infoStats__info a {
+
+  .infoStats__info,
+  .infoStats__info a {
     max-width: 320px;
     font-size: 16px;
     line-height: 24px;
   }
-  .formInput, .formInput::placeholder, .submitBtn {
+
+  .formInput,
+  .formInput::placeholder,
+  .submitBtn {
     font-size: 16px;
     line-height: 24px;
   }
@@ -294,23 +352,29 @@
   .aboutImg__content {
     height: 400px;
   }
+
   .stats__number {
     font-size: 48px;
     line-height: 52px;
   }
+
   .contactGrid {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
+
   .mySwiper {
     margin-top: 24px;
   }
+
   .infoFormDiv {
     margin-top: 24px;
   }
+
   .infoStats {
     gap: 16px;
   }
+
   .infoStats__iconDiv {
     width: 48px;
     height: 48px;
@@ -321,27 +385,34 @@
   .aboutTextSection {
     margin-top: 40px;
   }
+
   .aboutTextSection__inner {
     gap: 16px;
   }
+
   .aboutImg {
     margin-top: 40px;
   }
+
   .aboutImg__content {
     height: 320px;
     border-radius: 24px;
   }
+
   .aboutImg__content img {
     border-radius: 24px;
-  }  
+  }
+
   .aboutStats__content {
     margin-top: 16px;
     gap: 9px;
   }
+
   .aboutDesc {
     font-size: 16px;
     line-height: 24px;
   }
+
   .contactGrid {
     margin-top: 24px;
     display: flex;
@@ -349,20 +420,25 @@
     flex-direction: column-reverse;
     gap: 16px;
   }
+
   .contact__map {
     width: 100%;
     height: 320px;
   }
+
   #phoneInfo {
     flex-direction: row;
     gap: 24px;
   }
+
   .infoStats__info {
     max-width: 100%;
   }
+
   .infoForm {
     gap: 16px;
   }
+
   .mySwiper {
     margin-top: 16px;
   }
@@ -372,56 +448,73 @@
   .aboutImg {
     margin-top: 16px;
   }
+
   .aboutImg__content {
     height: 240px;
   }
+
   .stats__number {
     font-size: 32px;
     line-height: 40px;
   }
+
   .stats__text {
     font-size: 12px;
     line-height: 18px;
   }
+
   .achievements__inner {
     gap: 16px;
     padding: 32px 20px;
   }
+
   .aboutDesc {
     font-size: 14px;
     line-height: 22px;
   }
-  .infoStats__info, .infoStats__info a {
+
+  .infoStats__info,
+  .infoStats__info a {
     font-size: 14px;
     line-height: 24px;
     max-width: 80%;
   }
-  .formInput, .submitBtn, .formInput::placeholder {
+
+  .formInput,
+  .submitBtn,
+  .formInput::placeholder {
     font-size: 14px;
     line-height: 24px;
   }
+
   .infoStatsContainer {
     gap: 16px;
   }
+
   .infoIcon {
     width: 20px;
     height: 20px;
   }
+
   .formInputDiv {
     display: flex;
     flex-direction: column;
   }
+
   .callUs {
     font-size: 20px;
     line-height: 28px;
   }
+
   .formInput {
     padding: 12px 14px;
   }
+
   .swiper-slide {
     padding: 8px;
   }
-  .swiperImageDiv { 
+
+  .swiperImageDiv {
     height: 105px;
   }
 }

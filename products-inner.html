@@ -130,6 +130,28 @@
       </div>
       <div class="mainProduct">
         <div id="productTop" class="productMainImageSection"><img src="./media/tuz.png" alt="tuz"></div>
+        <div class="circlesDiv">
+          <div class="circle">
+            <img src="./media/medal.png" alt="medal" class="circleSvg">
+            <div class="circleTextDiv">
+              <p class="key">Navi:</p>
+              <p class="value">Oliy nav</p>
+            </div>
+          </div>
+          <div class="circle">
+            <img src="./media/tarozi.png" alt="tarozi" class="circleSvg">
+            <div class="circleTextDiv">
+              <p class="key">Og'irligi:</p>
+              <p class="value">1kg</p>
+            </div>
+          </div>
+          <div class="circle">
+            <div id="lastChild" class="circleTextDiv">
+              <p class="key">Yaroqlilik muddati:</p>
+              <p class="value">12 oy</p>
+            </div>
+          </div>
+        </div>
         <div id="productInfo" class="productInfoSection">
           <div class="sostavDiv">
             <p class="textRegular">Tarkibi:</p>
@@ -170,21 +192,19 @@
         </svg>
         <p class="modalTitle">BIZ BILAN BOG'LANING!</p>
         <form class="contactForm modalForm">
-          <div class="form__div">
-            <p class="form__label">Ism <sup>*</sup></p>
-            <input class="form__input" type="text" placeholder="Ism" required>
-          </div>
-          <div class="form__div">
-            <p class="form__label">Tel nomer <sup>*</sup></p>
-            <input class="form__input" type="number" placeholder="+998 ( ) --- -- --" required>
-          </div>
-          <div class="form__div">
-            <p class="form__label">Elektron pochta <sup>*</sup></p>
-            <input class="form__input" type="email" placeholder="Elektron pochta" required>
+          <div class="gridModal">
+            <div class="form__div">
+              <p class="form__label">Ism <sup>*</sup></p>
+              <input class="form__input" type="text" placeholder="Ism" required>
+            </div>
+            <div class="form__div">
+              <p class="form__label">Tel nomer <sup>*</sup></p>
+              <input class="form__input" id="phoneInput" type="text" placeholder="+998 ( ) --- -- --" required>
+            </div>
           </div>
           <div class="form__div">
             <p class="form__label">Qo`shimcha ma`lumot</p>
-            <input class="form__input" type="text" placeholder="Qo`shimcha ma`lumot">
+            <textarea class="form__input" cols="100%" rows="5" placeholder="Qo`shimcha ma`lumot"></textarea>
           </div>
           <button type="submit" class="submitBtn">Jo`natish</button>
         </form>
@@ -193,6 +213,28 @@
     <!-- ==== -->
     <div class="aboutProduction_mini container">
       <div id="productTop" class="productMainImageSection"><img src="./media/tuz.png" alt="tuz"></div>
+      <div class="circlesDiv">
+        <div class="circle">
+          <img src="./media/medal.png" alt="medal" class="circleSvg">
+          <div class="circleTextDiv">
+            <p class="key">Navi:</p>
+            <p class="value">Oliy nav</p>
+          </div>
+        </div>
+        <div class="circle">
+          <img src="./media/tarozi.png" alt="tarozi" class="circleSvg">
+          <div class="circleTextDiv">
+            <p class="key">Og'irligi:</p>
+            <p class="value">1kg</p>
+          </div>
+        </div>
+        <div class="circle">
+          <div id="lastChild" class="circleTextDiv">
+            <p class="key">Yaroqlilik muddati:</p>
+            <p class="value">12 oy</p>
+          </div>
+        </div>
+      </div>
       <div class="productMainInfo">
         <p class="productName">Orzu osh tuzi - Birinchi nav Yirik</p>
         <p class="productWeight">1 kg</p>
@@ -358,5 +400,7 @@
       </div>
     </div>
   </footer> 
+  <script src="fslightbox.js"></script>
+  <script src="https://unpkg.com/imask"></script>
 </body>
 </html>

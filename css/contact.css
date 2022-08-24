@@ -1,14 +1,17 @@
 #contactTitle {
   text-transform: uppercase;
 }
+
 .contactMapContainer {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
+
 .mapSection {
   margin-top: 63px;
 }
+
 .Map {
   width: 100%;
   height: 560px;
@@ -16,18 +19,21 @@
   overflow: hidden;
   border: none;
 }
+
 .contactGrid {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 24px;
 }
+
 .contact__map {
   position: relative;
   flex: 1 1 auto;
   border-radius: 24px;
   overflow: hidden;
 }
+
 .contactMap {
   position: absolute;
   top: 0;
@@ -35,23 +41,27 @@
   width: 100%;
   height: 100%;
 }
+
 .contactForm {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
+
 .form__div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
 .form__label {
   font-family: "Roboto";
   font-size: 20px;
   line-height: 32px;
   color: var(--blue);
 }
+
 .form__input {
   border: 1px solid var(--light-blue);
   font-family: "Roboto";
@@ -62,15 +72,18 @@
   overflow: hidden;
   color: var(--blue);
 }
+
 .form__input:focus {
   outline: none;
 }
+
 .form__input::placeholder {
   color: var(--blue);
   opacity: 0.64;
   font-size: 16px;
   line-height: 24px;
 }
+
 .submitBtn {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -85,28 +98,39 @@
   transition: 0.3s;
   cursor: pointer;
 }
+
 .submitBtn:hover {
-  background-color: #ca0f79;
+  box-shadow: 0 10px 30px rgba(239, 28, 148, 0.5);
   transition: 0.3s;
 }
+
+.submitBtn:active {
+  transform: scale(0.95);
+  transition: 0.3s;
+}
+
 .contactLink {
   display: flex;
   gap: 8px;
 }
+
 #location {
   max-width: 322px;
   width: 100%;
 }
+
 .contactLinkContainer {
   display: flex;
   justify-content: space-between;
   gap: 48px;
 }
+
 .contactIcon {
   width: 24px;
   height: 24px;
   color: var(--blue);
 }
+
 .contactLink__value {
   font-family: "Inter";
   font-size: 16px;
@@ -114,10 +138,12 @@
   color: var(--blue);
   transition: 0.3s;
 }
+
 .contactLink__value:hover {
   color: var(--pink);
   transition: 0.3s;
 }
+
 .contactLink__numbers {
   display: flex;
   flex-direction: column;
@@ -128,20 +154,25 @@
   .Map {
     height: 480px;
   }
+
   .form__label {
     font-size: 18px;
     line-height: 26px;
   }
+
   .contactLinkContainer {
     gap: 24px;
   }
+
   .contactIcon {
     width: 18px;
     height: 18px;
   }
+
   #location {
     max-width: 290px;
   }
+
   .contactLink__value {
     font-size: 14px;
     line-height: 20px;
@@ -158,10 +189,12 @@
   .mapSection {
     margin-top: 40px;
   }
+
   .Map {
     height: 360px;
     border-radius: 24px;
   }
+
   .contactGrid {
     display: flex;
     display: -webkit-flex;
@@ -169,14 +202,19 @@
     gap: 32px;
     margin-top: 32px;
   }
+
   .contact__map {
     height: 260px;
     border-radius: 24px;
   }
+
   .contactForm {
     gap: 24px;
   }
-  .form__input, .form__input::placeholder, .submitBtn {
+
+  .form__input,
+  .form__input::placeholder,
+  .submitBtn {
     font-size: 14px;
     line-height: 20px;
     border-radius: 16px;
@@ -187,29 +225,36 @@
   .Map {
     height: 320px;
   }
+
   .form__label {
     font-size: 16px;
     line-height: 24px;
   }
+
   .contactLink {
     font-weight: 500;
     font-size: 14px;
     line-height: 22px;
   }
+
   .contactIcon {
     width: 24px;
     height: 24px;
   }
+
   .contactLinkContainer {
     flex-direction: column;
     gap: 16px;
   }
+
   .submitBtn {
     margin-top: 16px;
   }
+
   .contactForm {
     gap: 16px;
   }
+
   #location {
     max-width: 100%;
   }
