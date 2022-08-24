@@ -9,28 +9,28 @@ const mobileHeader__inner = document.querySelector(".mobileHeader__inner")
 
 let clicked = false
 const toggleFunction = () => {
-    if (clicked) {
-        mobileHeader.style.display = "none"
-        clicked = false
-    } else {
-        mobileHeader.style.display = "flex"
-        clicked = true
-    }
+  if (clicked) {
+    mobileHeader.style.display = "none"
+    clicked = false
+  } else {
+    mobileHeader.style.display = "flex"
+    clicked = true
+  }
 }
 
 hamburgerDiv.addEventListener("click", () => {
-    mobileHeader.classList.toggle("hidden")
-    span1.classList.toggle("rotate45deg")
-    span2.classList.toggle("span2-hidden")
-    span3.classList.toggle("rotate-45deg")
-    body.classList.toggle("overflow-y-hidden")
-    toggleFunction()
+  mobileHeader.classList.toggle("hidden")
+  span1.classList.toggle("rotate45deg")
+  span2.classList.toggle("span2-hidden")
+  span3.classList.toggle("rotate-45deg")
+  body.classList.toggle("overflow-y-hidden")
+  toggleFunction()
 })
 
 if (window.innerWidth <= 768) {
-    mobileHeader__inner.classList.add("container")
+  mobileHeader__inner.classList.add("container")
 } else {
-    mobileHeader.classList.remove("container")
+  mobileHeader.classList.remove("container")
 }
 
 const homeBtn = document.querySelector("#homeBtn")
@@ -45,19 +45,19 @@ const contactBtn = document.querySelector("#contactBtn")
 const contact = document.querySelector("#contact")
 
 homeBtn.addEventListener("click", () => {
-    home.scrollIntoView(true)
+  home.scrollIntoView(true)
 })
 aboutBtn.addEventListener("click", () => {
-    about.scrollIntoView(true)
+  about.scrollIntoView(true)
 })
 productsBtn.addEventListener("click", () => {
-    productsSec.scrollIntoView(true)
+  productsSec.scrollIntoView(true)
 })
 newsBtn.addEventListener("click", () => {
-    news.scrollIntoView(true)
+  news.scrollIntoView(true)
 })
 contactBtn.addEventListener("click", () => {
-    contact.scrollIntoView(true)
+  contact.scrollIntoView(true)
 })
 
 
@@ -66,43 +66,44 @@ const productMinis = document.querySelectorAll(".productMini")
 const activeProductTitles = document.querySelectorAll(".activeProduct__title")
 
 productMinis.forEach((productMini, index) => {
-    productMini.addEventListener("click", () => {
-        products.forEach(product => {
-            product.classList.remove("isActive")
-        });
-        productMinis.forEach(productMini => {
-            productMini.classList.remove("activeProductMini")
-        });
-        activeProductTitles.forEach(title => {
-            title.classList.remove("isActive")
-        })
-
-
-        products[index].classList.add("isActive");
-        productMinis[index].classList.add("activeProductMini")
-        activeProductTitles[index].classList.add("isActive")
+  productMini.addEventListener("click", () => {
+    products.forEach(product => {
+      product.classList.remove("isActive")
     });
+    productMinis.forEach(productMini => {
+      productMini.classList.remove("activeProductMini")
+    });
+    activeProductTitles.forEach(title => {
+      title.classList.remove("isActive")
+    });
+
+    products[index].classList.add("isActive");
+    productMinis[index].classList.add("activeProductMini")
+    activeProductTitles[index].classList.add("isActive")
+  });
 });
 
+const mobileMiniProducts = document.querySelectorAll(".mobileMiniProduct")
+const miniActiveProductImageDivs = document.querySelectorAll(".miniActiveProductImageDiv")
+const miniTitles = document.querySelectorAll(".miniTitle")
 
+mobileMiniProducts.forEach((product, index) => {
+  product.addEventListener("click", () => {
+    mobileMiniProducts.forEach(mobileProduct => {
+      mobileProduct.classList.remove("activeProductMini");
+    })
+    miniTitles.forEach(title => {
+      title.classList.remove("isActive");
+    });
+    miniActiveProductImageDivs.forEach(miniActiveProductImageDiv => {
+      miniActiveProductImageDiv.classList.remove("isActive");
+    });
 
-
-
-
-// const products = document.querySelectorAll(".productMini")
-// const mobileProducts = document.querySelectorAll(".mobileMiniProduct")
-
-// products.forEach(product => {
-//     product.addEventListener("click", () => {
-//         product.classList.toggle("activeProductMini")
-//     })
-// })
-
-// mobileProducts.forEach(mobileProduct => {
-//     mobileProduct.addEventListener("click", () => {
-//         mobileProduct.classList.toggle("activeProductMini")
-//     })
-// })
+    mobileMiniProducts[index].classList.add("activeProductMini")
+    miniActiveProductImageDivs[index].classList.add("isActive")
+    miniTitles[index].classList.add("isActive")
+  });
+});
 
 const currentYearSpan = document.querySelector(".currentYear");
 const currentYear = new Date().getFullYear();

@@ -517,7 +517,6 @@
   border: none;
   padding: 24px 26px;
   border-radius: 8px;
-  position: relative;
   transition: 0.3s;
 }
 .activeProductMini::after {
@@ -538,12 +537,12 @@
   gap: 27px;
 }
 .activeProduct__title {
- font-family: "Exo 2";
- font-size: 32px;
- line-height: 40px;
- font-weight: 600;
- color: var(--blue); 
- display: none;
+  font-family: "Exo 2";
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  color: var(--blue); 
+  display: none;
 }
 .activeProduct__info {
   display: flex;
@@ -985,12 +984,21 @@
     width: 100%;
     height: 160px;
   }
-  .productImageDiv {
+  .miniActiveProductImageDiv.isActive {
+    display: block;
+  }
+  .miniActiveProductImageDiv {
+    display: none;
+    position: relative;
     border: none;
     width: 100%;
+    height: 220px;
   }
   .activeProduct__img {
     padding: 0;
+  }
+  .activeProductMobile__content {
+    width: 100%;
   }
   .productMini__weight {
     justify-content: center;
@@ -1010,7 +1018,11 @@
   .otherProductsTop {
     gap: 0;
   }
-  .activeProduct__title {
+  .miniTitle.isActive {
+    display: block;
+  }
+  .miniTitle {
+    display: none;
     font-size: 18px;
     line-height: 24px;
   }
