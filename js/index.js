@@ -60,20 +60,49 @@ contactBtn.addEventListener("click", () => {
     contact.scrollIntoView(true)
 })
 
-const products = document.querySelectorAll(".productMini")
-const mobileProducts = document.querySelectorAll(".mobileMiniProduct")
 
-products.forEach(product => {
-    product.addEventListener("click", () => {
-        product.classList.toggle("activeProductMini")
-    })
-})
+const products = document.querySelectorAll(".productImageDiv")
+const productMinis = document.querySelectorAll(".productMini")
+const activeProductTitles = document.querySelectorAll(".activeProduct__title")
 
-mobileProducts.forEach(mobileProduct => {
-    mobileProduct.addEventListener("click", () => {
-        mobileProduct.classList.toggle("activeProductMini")
-    })
-})
+productMinis.forEach((productMini, index) => {
+    productMini.addEventListener("click", () => {
+        products.forEach(product => {
+            product.classList.remove("isActive")
+        });
+        productMinis.forEach(productMini => {
+            productMini.classList.remove("activeProductMini")
+        });
+        activeProductTitles.forEach(title => {
+            title.classList.remove("isActive")
+        })
+
+
+        products[index].classList.add("isActive");
+        productMinis[index].classList.add("activeProductMini")
+        activeProductTitles[index].classList.add("isActive")
+    });
+});
+
+
+
+
+
+
+// const products = document.querySelectorAll(".productMini")
+// const mobileProducts = document.querySelectorAll(".mobileMiniProduct")
+
+// products.forEach(product => {
+//     product.addEventListener("click", () => {
+//         product.classList.toggle("activeProductMini")
+//     })
+// })
+
+// mobileProducts.forEach(mobileProduct => {
+//     mobileProduct.addEventListener("click", () => {
+//         mobileProduct.classList.toggle("activeProductMini")
+//     })
+// })
 
 const currentYearSpan = document.querySelector(".currentYear");
 const currentYear = new Date().getFullYear();

@@ -382,6 +382,13 @@
   z-index: -2;
 }
 /* ===== PRODUCT-SECTION ===== */
+.productImageDiv.isActive {
+  display: block;
+  transition: 0.3s;
+}
+.activeProduct__title.isActive {
+  display: block;
+}
 .productSection {
   margin-top: 65px;
 }
@@ -390,6 +397,9 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 .product {
   padding: 56px 100px;
@@ -404,6 +414,7 @@
   max-width: 310px;
   width: 100%;
   position: relative;
+  display: none;
 }
 .activeProduct__img {
   position: absolute;
@@ -532,6 +543,7 @@
  line-height: 40px;
  font-weight: 600;
  color: var(--blue); 
+ display: none;
 }
 .activeProduct__info {
   display: flex;
