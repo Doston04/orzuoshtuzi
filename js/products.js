@@ -27,12 +27,17 @@ productImageBtn.addEventListener("click", () => {
 const callBtn = document.querySelectorAll(".callBtn__inner")
 const modal = document.querySelector(".modal")
 const modalContent = document.querySelector(".modal__inner")
+const closeBtn = document.querySelector(".closeBtn")
 
 callBtn.forEach(btn => {
   btn.addEventListener("click", () => {
     modal.style.display = "flex"
   })
 });
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none"
+})
 
 window.addEventListener("click", (e) => {
   if (e.target == modal) {
