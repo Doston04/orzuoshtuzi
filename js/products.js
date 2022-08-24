@@ -24,12 +24,14 @@ productImageBtn.addEventListener("click", () => {
   productInfoBtn.classList.remove("activeSquare")
 })
 
-const callBtn = document.querySelector(".callBtn__inner")
+const callBtn = document.querySelectorAll(".callBtn__inner")
 const modal = document.querySelector(".modal")
 const modalContent = document.querySelector(".modal__inner")
 
-callBtn.addEventListener("click", () => {
-  modal.style.display = "flex"
+callBtn.forEach(btn => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "flex"
+  })
 });
 
 window.addEventListener("click", (e) => {
@@ -39,3 +41,4 @@ window.addEventListener("click", (e) => {
     modal.style.display = "flex"
   }
 });
+
