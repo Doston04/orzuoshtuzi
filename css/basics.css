@@ -453,6 +453,10 @@ header {
   justify-content: center;
   gap: 16px;
   padding: 70px 0 70px 0;
+  background-image: url("../media/pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .pageName {
