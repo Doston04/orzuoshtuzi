@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 /* ===== HERO ===== */
 .hero {
   height: calc(100vh + 60px);

@@ -168,7 +168,7 @@
 .aboutProductSection {
   margin-top: 64px;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: space-between;
   height: 100%;
   position: relative;
@@ -178,6 +178,10 @@
   display: flex;
   flex-direction: column;
   gap: 44px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding-top: 20px;
   background-color: #fff;
 }
 
@@ -230,17 +234,15 @@
   flex: 1 1 auto;
   margin: 0 136px;
   overflow-y: scroll;
-  max-height: 700px;
-  height: 100%;
 }
 
-::-webkit-scrollbar {
+.mainProduct::-webkit-scrollbar {
   width: 4px;
   border-radius: 4px;
   background-color: var(--white);
 }
 
-::-webkit-scrollbar-thumb {
+.mainProduct::-webkit-scrollbar-thumb {
   background-color: #EBEBEB;
   border-radius: 8px;
 }
@@ -318,6 +320,10 @@
 }
 
 .productMainInfo {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding-top: 20px;
   max-width: 320px;
   width: 100%;
   color: #020105;
