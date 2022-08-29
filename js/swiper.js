@@ -3,9 +3,9 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 16,
   autoplay: {
     delay: 2400,
-    speed: 10000,
     disableOnInteraction: false
   },
+  speed: 1200,
   loop: true,
   breakpoints: {
     600: {

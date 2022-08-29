@@ -264,6 +264,7 @@ html {
   justify-content: center;
   transition: 0.3s;
   padding: 20px;
+  z-index: 1;
 }
 
 .more__inner {
@@ -409,9 +410,22 @@ html {
 }
 
 /* ===== PRODUCT-SECTION ===== */
+.moreButton {
+  display: none;
+}
+
+.moreButton.isActive {
+  display: block;
+}
+
 .productImageDiv.isActive {
   display: block;
   transition: 0.3s;
+}
+
+.sostavText.isActive,
+.infoText.isActive {
+  display: block;
 }
 
 .activeProduct__title.isActive {
@@ -627,6 +641,11 @@ html {
   font-size: 18px;
   line-height: 28px;
   color: var(--blue);
+}
+
+.sostavText,
+.infoText {
+  display: none;
 }
 
 /* ===== ===== */

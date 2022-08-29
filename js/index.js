@@ -64,6 +64,9 @@ contactBtn.addEventListener("click", () => {
 const products = document.querySelectorAll(".productImageDiv")
 const productMinis = document.querySelectorAll(".productMini")
 const activeProductTitles = document.querySelectorAll(".activeProduct__title")
+const allInfoTexts = document.querySelectorAll(".sostavText")
+const moreButtons = document.querySelectorAll(".moreButton")
+const infoTexts = document.querySelectorAll(".infoText")
 
 productMinis.forEach((productMini, index) => {
   productMini.addEventListener("click", () => {
@@ -76,10 +79,23 @@ productMinis.forEach((productMini, index) => {
     activeProductTitles.forEach(title => {
       title.classList.remove("isActive")
     });
+    allInfoTexts.forEach(text => {
+      text.classList.remove("isActive")
+    });
+    moreButtons.forEach(button => {
+      button.classList.remove("isActive")
+    });
+    infoTexts.forEach(text => {
+      text.classList.remove("isActive")
+    });
+
 
     products[index].classList.add("isActive");
     productMinis[index].classList.add("activeProductMini")
     activeProductTitles[index].classList.add("isActive")
+    allInfoTexts[index].classList.add("isActive")
+    moreButtons[index].classList.add("isActive")
+    infoTexts[index].classList.add("isActive")
   });
 });
 

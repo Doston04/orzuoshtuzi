@@ -1,3 +1,5 @@
+@import "@fancyapps/ui/dist/fancybox.css";
+
 .filterSection {
   margin-top: 64px;
 }
@@ -521,7 +523,7 @@
 
 .value {
   font-family: "Roboto";
-  font-size: 24px;
+  font-size: 20px;
   line-height: 28px;
   color: var(--blue);
   font-weight: 500;
@@ -536,6 +538,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+}
+
+.fancybox__slide {
+  flex-direction: column-reverse;
 }
 
 @media (max-width: 1800px) {
@@ -814,6 +820,7 @@
   }
 
   .productMainInfo {
+    position: static;
     max-width: 100%;
     margin-top: 32px;
   }

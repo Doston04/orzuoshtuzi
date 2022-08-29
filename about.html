@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="./css/basics.css">
   <link rel="stylesheet" href="./css/about.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-  <script src="./js/scripts.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+  <script src="./js/scripts.js" defer></script>
   <script src="./js/swiper.js" defer></script>
+  <script src="./js/aboutSwiper.js" defer></script>
 </head>
 <body class="body">
   <header>
@@ -119,11 +120,18 @@
         <p class="textSection__text">Mijozlarimiz uchun imkon qadar foydali bo'lish biz uchun muhimdir. Shuning uchun biz sizni bizning ishimiz, mahsulotimiz va ishning siz uchun muhim bo'lgan boshqa jihatlari to'g'risida fikr-mulohazalaringizni biz bilan baham ko'rishga taklif qilamiz. Mijozlarning so'rovlariga tezkor javob berish bizning asosiy afzalliklarimizdan biridir. Doimiy mijozlar o'zlarining hajmlarini iloji boricha tezroq moslashuvchan ravishda oshirib, bozorga moslashuvchan munosabatda bo'lishlari mumkin.</p>
       </div>
     </div>
+    <!-- AboutSwiper -->
     <div class="aboutImg">
       <div class="aboutImg__inner container">
-        <div class="aboutImg__content"><img src="./media/aboutImg.png" alt="orzuoshtuzi"></div>
+        <div class="swiper mySwiperDefault">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiperSlideImage"><img src="./media/aboutImg.png" alt="orzuoshtuzi"></div>
+            <div class="swiper-slide swiperSlideImage"><img src="./media/aboutImg2.png" alt="orzuoshtuzi"></div>
+          </div>  
+        </div>
       </div>
     </div>
+    <!-- AboutSwiperEnd -->
     <div class="aboutStats">
       <div class="aboutStats__inner container">
         <div class="aboutStats__content">
@@ -155,13 +163,19 @@
       </div>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiperSlideDocument swiper-slide">
             <div class="swiperImageDiv"><img class="swiperImage" src="./media/sertifikat1.png" alt="sertifikat"></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiperSlideDocument swiper-slide">
             <div class="swiperImageDiv"><img class="swiperImage" src="./media/salt.png" alt="sertifikat"></div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiperSlideDocument swiper-slide">
+            <div class="swiperImageDiv"><img class="swiperImage" src="./media/sertifikat2.png" alt="sertifikat"></div>
+          </div>
+          <div class="swiperSlideDocument swiper-slide">
+            <div class="swiperImageDiv"><img class="swiperImage" src="./media/salt.png" alt="sertifikat"></div>
+          </div>
+          <div class="swiperSlideDocument swiper-slide">
             <div class="swiperImageDiv"><img class="swiperImage" src="./media/sertifikat2.png" alt="sertifikat"></div>
           </div>
         </div>

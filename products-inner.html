@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="./css/basics.css">
   <link rel="stylesheet" href="./css/products.css">
   <link rel="stylesheet" href="./css/contact.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+  />
   <script src="./js/scripts.js" defer></script>
   <script src="./js/products.js" defer></script>
 </head>
@@ -163,9 +167,9 @@
           <p class="textSemibold">Tovarlarni quruq va qorong'i joyda saqlash tavsiya etiladi, saqlash muddati tugagandan so'ng, mahsulot ishlab chiqaruvchiga almashtirish uchun qaytarilishi kerak.</p>
         </div>
         <div id="productImage" class="productImageSection">
-          <div class="productImage__div"><img src="./media/productInner1.png" alt="test"></div>
-          <div class="productImage__div"><img src="./media/productInner2.png" alt="test"></div>
-          <div class="productImage__div"><img src="./media/productInner3.png" alt="test"></div>
+          <div class="productImage__div"><a data-fancybox data-type="image" href="./media/productInner1.png"><img src="./media/productInner1.png" alt="test"></a></div>
+          <div class="productImage__div"><a data-fancybox data-type="image" href="./media/productInner2.png"><img src="./media/productInner2.png" alt="test"></a></div>
+          <div class="productImage__div"><a data-fancybox data-type="image" href="./media/productInner3.png"><img src="./media/productInner3.png" alt="test"></a></div>
         </div>
       </div>
       <aside class="asideInfo">
@@ -265,9 +269,9 @@
         <p class="textSemibold">Tovarlarni quruq va qorong'i joyda saqlash tavsiya etiladi, saqlash muddati tugagandan so'ng, mahsulot ishlab chiqaruvchiga almashtirish uchun qaytarilishi kerak.</p>
       </div>
       <div id="productImage" class="productImageSection">
-        <div class="productImage__div"><img src="./media/productInner1.png" alt="test"></div>
-        <div class="productImage__div"><img src="./media/productInner2.png" alt="test"></div>
-        <div class="productImage__div"><img src="./media/productInner3.png" alt="test"></div>
+        <div class="productImage__div"><a href="./media/test.pngng" data-fancybox="gallery"><img src="./media/test.png" alt="test"></a></div>
+        <div class="productImage__div"><a href="./media/test.png" data-fancybox="gallery"><img src="./media/test.png" alt="test"></a></div>
+        <div class="productImage__div"><a href="./media/productInner3.png" data-fancybox="gallery"><img src="./media/productInner3.png" alt="test"></a></div>
       </div>
     </div>
     <div class="section">
@@ -404,7 +408,7 @@
       </div>
     </div>
   </footer> 
-  <!-- <script src="fslightbox.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="https://unpkg.com/imask"></script>
 </body>
 </html>
