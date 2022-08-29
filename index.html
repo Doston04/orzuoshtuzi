@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Orzu osh tuzi Asosiy sahifaga xush kelibsiz!">
   <title>Orzu Osh Tuzi | Asosiy</title>
-  <link rel="stylesheet" href="./css/basics.css">
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/news.css">
-  <link rel="stylesheet" href="./css/about.css">
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
   />
+  <link rel="stylesheet" href="./css/basics.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/news.css">
+  <link rel="stylesheet" href="./css/about.css">
   <script src="./js/index.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="./js/aboutSwiper.js" defer></script>
@@ -138,7 +138,8 @@
         <p class="sectionTitle">Kompaniya haqida</p>
         <div class="mobileMoreBtnDiv">
           <p id="aboutDesc" class="sectionDesc">Bugungi kunda "ORZU OSH TUZI" - bu xalq tomonidan tan olingan eng sifatli tuz. "ORZU OSH TUZU" butun O'zbekiston Respublikasi bo'ylab etkazib beriladi. Davlat standartlariga mos keladi. Hozirda kompaniyamiz turli navlarni ishlab chiqarmoqda</p>
-          <a id="aboutTextMore" href="#" class="more">
+          <div>
+            <a id="aboutTextMore" href="#" class="more">
             <div class="more__inner">
               <span>Batafsil</span>
               <svg class="arrowRight" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,6 +147,7 @@
               </svg>
             </div>
           </a>
+          </div>
         </div>
       </div>
     </div>
@@ -153,9 +155,9 @@
     <div class="aboutImg">
       <div class="aboutImg__inner container">
         <div class="swiper mySwiperDefault">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiperSlideImage"><img src="./media/aboutImg.png" alt="orzuoshtuzi"></div>
-            <div class="swiper-slide swiperSlideImage"><img src="./media/aboutImg2.png" alt="orzuoshtuzi"></div>
+          <div class="swiper-wrapper swiperWrapper">
+            <div class="swiper-slide swiperSlideImage"><img class="swiperSlideImage__img" src="./media/aboutImg.png" alt="orzuoshtuzi"></div>
+            <div class="swiper-slide swiperSlideImage"><img class="swiperSlideImage__img" src="./media/aboutImg2.png" alt="orzuoshtuzi"></div>
           </div>  
         </div>
         <div>
